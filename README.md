@@ -1,1 +1,1 @@
-# marine-structures-lab-nitk
+# fluid-machinery-lab-nitk
