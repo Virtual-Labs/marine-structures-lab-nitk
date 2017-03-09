@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+
+<title>SOLVE</title>
+<link rel="stylesheet" href="sgca.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script type="text/javascript" src= "jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src= "sgca.js"></script>
+<script type="text/javascript" src= "jquery-2.1.4.js"></script>
+<script type="text/javascript" src= "ej.web.all.js"></script>
+
+
+<script>
+var simsubscreennum=0;
+var temp=0;
+var lnt=0;
+var values=[[500.00,880.00,1508.00,1270.00,2.676],
+            [500.00,886.00,1512.00,1270.00,2.681],
+            [500.00,892.00,1518.00,1270.00,2.722],
+            [500.00,900.00,1524.00,1270.00,2.74],];
+			
+var values1=[[650.00,976.00,1756.00,1554.00,2.629],
+             [650.00,935.00,1734.00,1554.00,2.714],
+             [650.00,950.00,1740.00,1554.00,2.632],
+             [650.00,990.00,1768.00,1554.00,2.698],];
+			
+</script>
+</head>
+
+
+
+<body style="margin:0">
+<!--Simulation Screen start		-->
+<div id="simscreen">
+
+<!--Title of Simulation		-->
+<div id="title"><h3>Specific gravity of fine aggregates</h3></div>
+
+<!--SubScreen Home	-->	
+<div class="simsubscreen" id="canvas0">
+<h4 class="incanvas" style="font-family:verdana; " >Objective</h4>
+<p class="incanvas" style="font-family:verdana; font-size:14px;" >To determine the specific gravity of fine aggregate using pycnometer.</p>
+<h4 class="incanvas"  style="font-family:verdana; ">Apparatus used:</h4>
+<p class="incanvas"style="font-family:verdana; font-size:14px;"  >Pycnometer, weighing balance, glass rod etc. </p>
+<img id="" style="position: absolute; left: 232px; top: 195px;" src="Images/5.png"/>
+<img id="" style="position: absolute; left: 430px; top: 255px;" src="Images/ewm.png"/>
+</div>
+
+
+
+
+<!--Step1	-->	
+
+<div class="simsubscreen" id="canvas2" style="visibility:hidden">
+<strong id="titlestep" class="incanvas">STEP </strong>
+<span class="circlebg" id="stepnumber">&nbsp;2&nbsp;</span>
+
+<p id="pumptext" class="steptext">Take empty weight of pycnometer along with its cap.</p>
+
+<img id="a1" style="position: absolute; left: 232px; top: 195px;cursor:move;" src="Images/5.png"/>
+<img id="" style="position: absolute; left: 430px; top: 255px;" src="Images/ewm.png"/>
+<img id="a2" style="position: absolute; left: 515px; top: 100px;visibility:hidden;" src="Images/6.png"/>
+<p id="can1" style="position:absolute;top: 450px; left:28px; font-family:verdana; font-size:14px;">Empty weight of pycnometer(W<sub>1</sub>)= _____ gm</p>
+<p id="v1" style="position:absolute;left: 528px; top:340px;font-family:verdana;font-size:14px;">_____ </p>
+</div>
+
+
+<!--step2-->
+<div class="simsubscreen" id="canvas1" style="visibility:hidden">
+<strong id="titlestep" class="incanvas">STEP </strong>
+<span class="circlebg" id="stepnumber">&nbsp;1&nbsp;</span>
+
+<p id="pumptext" class="steptext">Choose the type of sand</p>
+<form id="sand" style="position: absolute; left: 145px; top: 125px;visibility:hidden;">
+<input type="radio" id="r" name="subject" value="river" checked> River Sand<br><br><br><br><br><br><br><br><br>
+<input type="radio" id="b" name="subject" value="beach"> Beach Sand
+</form>
+<img id="rdb" style="position:absolute; left:330px; top:285px;" src="Images/rdb.png"/>
+<img id="bowl1" style="position:absolute; left:255px; top:227px;" src="Images/plate2.png"/>
+<img id="rdr" style="position:absolute; left:225px; top:28px;" src="Images/rdr.png"/>
+<img id="bowl2" style="position:absolute; left:253px; top:45px;" src="Images/plate1.png"/>
+</div>
+
+
+
+<!--Step3	-->	
+
+
+<div class="simsubscreen" id="canvas3" style="visibility:hidden"> 
+<strong id="titlestep" class="incanvas">STEP &nbsp;</strong> 
+<span class="circlebg" id="stepnumber">&nbsp;3&nbsp;</span>
+<p id="pumptext-2" class="steptext">&nbsp;Open the cap to fill one third of pycnometer with fine aggregate and weigh the pycnometer with aggregate.</p> 
+<img id="lrs3" style="position: absolute; left: 230px; top: 261px;visibility:hidden  " src="Images/rs2.png"/>
+<img id="lbs3" style="position: absolute; left: 250px; top: 258px;visibility:hidden  " src="Images/bs2.png"/>
+<img id="pbs3" style="position: absolute; left: 235px; top:160px;visibility:hidden " src="Images/bs1.png"/>
+<img id="prs3" style="position: absolute; left: 265px; top:185px;visibility:hidden" src="Images/rs1.png"/>
+<img id="" style="position: absolute; left: 430px; top: 255px;" src="Images/ewm.png"/>
+<img id="wrs3" style="position: absolute; left: 517px; top: 248px;visibility:hidden " src="Images/rs.png"/>
+<img id="wbs3" style="position: absolute; left: 517px; top: 248px;visibility:hidden" src="Images/bs4.png"/>
+<img id="a4" style="position: absolute; left: 515px; top: 98px;visibility:hidden" src="Images/5.png"/>
+<img id="bs3" style="position: absolute; left: 232px; top: 380px;visibility:hidden " src="Images/bs4.png"/>
+<img id="rs3" style="position: absolute; left: 232px; top: 380px;visibility:hidden " src="Images/rs.png"/>
+<img id="a3" style="position: absolute; left: 232px; top: 235px;cursor:move;" src="Images/1.5.png"/>
+<img id="stl3-1" style="position: absolute; left: 236px; top: 235px;cursor:move;" src="Images/1.2.png"/>
+<img id="nob3-1" style="position: absolute; left: 238px; top: 195px;cursor:move;" src="Images/1.1.png"/>
+<img id="stl3-2" style="position: absolute; left: 80px; top: 245px;cursor:move;visibility:hidden" src="Images/1.2.png"/>
+<img id="nob3-2" style="position: absolute; left: 80px; top: 195px;cursor:move;visibility:hidden" src="Images/1.1.png"/>
+<img id="hand3" style="position: absolute; left: 329px; top: 148px;cursor:pointer;visibility:hidden" src="Images/hn.png"/>
+<p id="can3" style="position:absolute;top: 450px; left:28px; font-family:verdana; font-size:14px;">Weight of pycnometer + 1/3rd of fine aggregate(W<sub>2</sub>)= _____gm</p>
+<p id="v3" style="position:absolute;left: 528px; top:340px;font-family:verdana; font-size:14px;">_____ </p>
+</div>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<!--Step4	-->	
+<div class="simsubscreen" id="canvas4" style="visibility:hidden">
+<strong class="incanvas">STEP &nbsp;</strong><span class="circlebg">&nbsp;4&nbsp;</span>
+<p class="steptext">&nbsp;Add water to pycnometer upto the brim level and shake it well to remove air bubbles. Then weigh it using weigh balance. </p>
+
+<img id="pw4" style="position: absolute; left: 253px; top: 198px; visibility:hidden   " src="Images/aks3.png"/>
+
+<img id="lw4" style="position: absolute; left: 274px; top:260px; visibility:hidden   " src="Images/aks1.png"/>
+
+
+
+
+<img id="" style="position: absolute; left: 430px; top: 255px;" src="Images/ewm.png"/>
+
+
+<img id="wmb" style="position: absolute; left: 517px; top: 248px; visibility:hidden   " src="Images/bch1.png"/> 
+<img id="wmr" style="position: absolute; left: 518px; top: 240px;visibility:hidden  " src="Images/riv1.png"/> 
+
+<img id="cb4" style="position: absolute; left: 235px; top: 258px;visibility:hidden   " src="Images/cb.png"/>
+<img id="lcb4" style="position: absolute;  left: 516px; top: 98px;visibility:hidden   " src="Images/cb.png"/>
+
+<img id="w4" style="position: absolute; left: 235px; top: 360px;visibility:hidden   " src="Images/coverblue.png"/>
+
+<img id="a6" style="position: absolute; left: 515px; top: 98px;visibility:hidden  " src="Images/5.png"/>
+
+<img id="bs4" style="position: absolute; left: 235px; top: 350px;visibility:hidden    " src="Images/bs4.png"/>
+<img id="rs4" style="position: absolute; left: 235px; top: 350px;visibility:hidden    " src="Images/rs.png"/>
+
+<img id="bch" style="position: absolute; left: 235px; top: 350px;visibility:hidden    " src="Images/bch1.png"/>
+<img id="riv" style="position: absolute; left: 235px; top: 350px;visibility:hidden    " src="Images/riv1.png"/>
+
+
+<img id="a5" style="position: absolute; left: 232px; top: 235px;cursor:move;" src="Images/1.5.png"/>
+<img id="stl4-1" style="position: absolute; left: 236px; top: 235px;cursor:move;" src="Images/1.2.png"/>
+<img id="nob4-1" style="position: absolute; left: 238px; top: 195px;cursor:move;" src="Images/1.1.png"/>
+<img id="stl4-2" style="position: absolute; left: 100px; top: 245px;cursor:move;visibility:hidden  " src="Images/1.2.png"/>
+<img id="nob4-2" style="position: absolute; left: 100px; top: 195px;cursor:move;visibility:hidden  " src="Images/1.1.png"/>
+<img id="hand4" style="position: absolute; left: 325px; top: 165px;cursor:pointer;visibility:hidden  " src="Images/hn.png"/>
+
+
+
+
+<p id="can4" style="position:absolute;top: 450px; left:28px;font-family:verdana; font-size:14px;">Weight of pycnometer + 1/3rd of fine aggregate +water (W<sub>3</sub>)=_____ gm</p>
+<p id="v4" style="position:absolute;left: 522px; top:340px;font-family:verdana; font-size:14px;">_____ </p>
+
+</div>
+
+<!--Step5	-->	
+<div class="simsubscreen" id="canvas5" style="visibility:hidden;">
+<strong class="incanvas">STEP &nbsp;</strong><span class="circlebg">&nbsp;5&nbsp;</span>
+<p class="steptext">&nbsp;Empty the pycnometer and fill water upto brim. Weigh the pycnometer.</p>
+
+<img id="pw5" style="position: absolute; left: 253px; top: 198px;visibility:hidden; " src="Images/aks3.png"/>
+
+<img id="lw5" style="position: absolute; left: 274px; top:260px;visibility:hidden; " src="Images/aks1.png"/>
+
+<img id="cb5" style="position: absolute; left: 235px; top: 248px;visibility:hidden   " src="Images/cb.png"/>
+<img id="lcb5" style="position: absolute;  left: 516px; top: 98px;visibility:hidden   " src="Images/cb.png"/>
+
+
+
+<img id="" style="position: absolute; left: 430px; top: 255px;" src="Images/ewm.png"/>
+
+<img id="wtr5" style="position: absolute; left: 517px; top: 248px;visibility:hidden;  " src="Images/coverblue.png"/>
+
+
+<img id="w5" style="position: absolute; left: 235px; top: 360px;visibility:hidden; "src="Images/coverblue.png"/> 
+
+<img id="a8" style="position: absolute; left: 515px; top: 98px;visibility:hidden;" src="Images/5.png"/>
+
+ 
+<img id="a7" style="position: absolute; left: 232px; top: 235px;cursor:move;" src="Images/1.5.png"/>
+<img id="stl5-1" style="position: absolute; left: 236px; top: 235px;cursor:move;" src="Images/1.2.png"/>
+<img id="nob5-1" style="position: absolute; left: 238px; top: 195px;cursor:move;" src="Images/1.1.png"/>
+<img id="stl5-2" style="position: absolute; left: 100px; top: 245px;cursor:move;visibility:hidden;" src="Images/1.2.png"/>
+<img id="nob5-2" style="position: absolute; left: 100px; top: 195px;cursor:move;visibility:hidden;" src="Images/1.1.png"/>
+<img id="hand5" style="position: absolute; left: 325px; top: 165px;cursor:pointer;visibility:hidden;" src="Images/hn.png"/> 
+<p id="can5" style="position:absolute;top: 450px; left:28px; font-family:verdana; font-size:14px;">Weight of flask+water (W<sub>5</sub>) = _____ gm</p>
+<p id="v5" style="position:absolute;left: 522px; top:340px;font-family:verdana; font-size:14px;">_____ </p>
+
+
+</div>
+
+
+
+<!--Step6	-->	
+<div class="simsubscreen" id="canvas6" style="visibility:hidden">
+<strong class="incanvas">STEP &nbsp;</strong><span class="circlebg">&nbsp;6&nbsp;</span>
+<p class="steptext">&nbsp;Repeat the same procedure for further trials.</p>
+<strong class="incanvas" style="position:absolute;top: 40px; left:50px; font-family:verdana;" ><h3>Observation</h3></strong>
+<p id="can6-1" style="position:absolute;top:100px; left:100px;font-family:verdana; font-size:14px;"> Empty weight of pycnometer(W<sub>1<sub>)= _____ gm</p>
+<p id="can6-2" style="position:absolute;top: 150px; left:100px; font-family:verdana; font-size:14px;">Weight of pycnometer + 1/3rd of fine aggregate(W<sub>2</sub>)= _____gm </p>
+<p id="can6-3" style="position:absolute;top: 200px; left:100px; font-family:verdana; font-size:14px;">Weight of pycnometer + 1/3rd of fine aggregate +water (W<sub>3</sub>) = _____ gm </p>
+<p id="can6-4" style="position:absolute;top: 250px; left:100px; font-family:verdana; font-size:14px;">Weight of pycnometer + water(W<sub>4</sub>) = _____ gm</p>
+<p id="can6-5" style="position:absolute;top: 300px; left:100px;font-family:verdana; font-size:14px;">Actual Specific gravity of fine aggregate  = _____</p> 
+<p id="can6-7" style="position:absolute;top: 350px; left:100px;font-family:verdana; font-size:14px;">Entered Specific gravity of fine aggregate  = _____</p> 
+<p id="can6-8" style="position:absolute;top: 400px; left:100px;font-family:verdana; font-size:14px;">Percentage(%) Error = _____</p> 
+<p id="can6-6" style="position:absolute;top: 450px; left:100px;font-family:verdana; font-size:14px;visibility:hidden">Average Specific gravity of fine aggregate  = = _____</p> 
+
+
+<form id="f1" style="position:absolute;top: 320px; left:100px; visibility:hidden; font-family:verdana; font-size:14px;" >
+Enter Specific gravity of fine aggregate : 
+<input type="text" id="i1" value="Enter the value" />
+<input type="button" value="CHECK" onclick="checkval()"/>
+</form>
+
+</div>
+
+<!--Trial text	-->
+<div id="">	
+<p id="trial" style="text-transform: uppercase;visibility :hidden;font-weight: bold;font-family:verdana; font-size:14px;"><strong>Trial = </strong></p>
+</div>
+
+	
+<!--next  Arrow	-->	
+<div id="nav">
+	<img id="nextButton" onclick="navNext(); " src="Images/Next.png" />
+</div>
+
+
+<!--Blinking Arrow	-->	
+<img class ="" id="arrow1" style="visibility:hidden;" src="Images/arrow1.png"/>
+
+<div id="copyright"> &copy; 2016 SOLVE - The Virtual Lab @ NITK Surathkal, Department of Applied Mechanics & Hydraulics</div>
+</body>
+</html>
