@@ -43,7 +43,7 @@ var quizJSON = {
 		
 		
 		{ // Question 3 - Multiple Choice, Multiple True Answers, Select Any
-              "q": "Match the correct size of the aggregates<br><img src=\"../images/table.png\"\height=250 width=350/>",
+              "q": "Match the correct size of the aggregates<br><img src=\"../images/table.PNG\"\height=250 width=350/>",
             "a": [
                 { "option": "a-1,b-2,c-3,d-4,e-5", "correct": false },
                 { "option": "a-4,b-3,c-5,d-1,e-2", "correct": true },
