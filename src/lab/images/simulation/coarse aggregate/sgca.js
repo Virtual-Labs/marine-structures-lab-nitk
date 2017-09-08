@@ -147,12 +147,12 @@ function magic()
 		
 		document.getElementById('stl2-1').onclick=function() { step2(); };
 		
-				}
-		
-		
-		
-		
 	}
+		
+		
+		
+		
+}
 	else if (simsubscreennum==3)
 	{
 				refresh1();
@@ -281,8 +281,8 @@ function step2()
 	document.getElementById('stl2-1').style.visibility="hidden";
 	document.getElementById('stl2-2').style.visibility="visible";
     document.getElementById("stl2-2").onclick=""; 
-
-	setTimeout(function(){
+    document.getElementById("stl2-2").onclick=""; 
+    setTimeout(function(){
 	myInt = setInterval(function(){ animatearrow(); }, 500);
     document.getElementById('arrow1').style="visibility:visible ;position:absolute;left: 240px; top: 240px;  height: 40px; z-index: 10;";
 			
@@ -291,52 +291,31 @@ function step2()
     document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
 		// Standard syntax
     document.getElementById("arrow1").style.transform = "rotate(180deg)";
-	}, 1000);
-	
-	setTimeout(function()
-	{
-		                        document.getElementById("stl2-2").onclick=""; 
-
-				document.getElementById('nob2-1').onclick=function() { step21(); };
-
-	}, 1600);
+	document.getElementById('nob2-1').onclick=function() { step21(); };
+	}, 1200);
 }
 
 
 function step21()
 {
 	myStopFunction();
-	
-	
-		   document.getElementById('nob2-1').style.visibility="hidden";
-	       document.getElementById('nob2-2').style.visibility="visible";
-
-	       document.getElementById('a3').onclick=""; 
-				       document.getElementById('nob2-2').onclick=""; 
-
-			setTimeout(function(){
-								                 
-
-   document.getElementById('hand2').style.visibility="visible";
+	document.getElementById('nob2-1').style.visibility="hidden";
+	document.getElementById('nob2-2').style.visibility="visible";
+    document.getElementById('a3').onclick=""; 
+	document.getElementById("nob2-2").onclick=""; 
+    document.getElementById("stl2-2").onclick="";
+    setTimeout(function(){
+	   document.getElementById('hand2').style.visibility="visible";
 	myInt = setInterval(function(){ animatearrow(); }, 500);
-    document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 485px; top: 200px; height: 40px; z-index: 10;";
+    document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 590px; top: 165px; height: 40px; z-index: 10;";
 			
     document.getElementById("arrow1").style.WebkitTransform = "rotate(360deg)"; 
 		// Code for IE9
     document.getElementById("arrow1").style.msTransform = "rotate(360deg)"; 
 		// Standard syntax
     document.getElementById("arrow1").style.transform = "rotate(360deg)";
-	}, 1600);
-	
-	setTimeout(function()
-	{
-
-		                        document.getElementById("nob2-2").onclick=""; 
-                                document.getElementById("stl2-2").onclick=""; 
-
-				document.getElementById('hand2').onclick=function() { step22(); };
-
-	}, 1600);
+	document.getElementById('hand2').onclick=function() { step22(); };
+	}, 1200);
 }
 
 	
@@ -345,29 +324,19 @@ function step22()
     myStopFunction();
     document.getElementById('hand2').style.transformOrigin = "100% 80%";
 	document.getElementById('hand2').style.animation = "valveturn-4 1.5s forwards ";
-	
-	
-		setTimeout(function()
-			{
-			document.getElementById('pca').style.visibility="visible";
-
-		 document.getElementById('ca2-1').style.visibility="visible";
+	setTimeout(function()
+	{
+		document.getElementById('pca').style.visibility="visible";
+        document.getElementById('ca2-1').style.visibility="visible";
 	    document.getElementById('ca2-1').style.animation = "water-5 1.8s 1 forwards";
-		 
-
 		 setTimeout(function()
-			{	document.getElementById('pca').style.visibility="hidden";
-			},1000);
-			
-			
-			},500);
-	
-	
-	
-	
-	
-    document.getElementById('stl2-2').onclick="";
-
+		{	
+		document.getElementById('pca').style.visibility="hidden";
+		},1000);
+     },500);
+	document.getElementById('stl2-2').onclick="";
+   setTimeout(function()
+	{
 	myInt = setInterval(function(){ animatearrow(); }, 500);
     document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 85px; top: 245px; height: 40px; z-index: 10;";
 			
@@ -376,21 +345,18 @@ function step22()
     document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
 		// Standard syntax
     document.getElementById("arrow1").style.transform = "rotate(180deg)";
-	
-		          setTimeout(function()
-				  {				  
-                	document.getElementById('hand2').style.visibility="hidden";
-				  },800);
-				document.getElementById('nob2-2').onclick=function() { step23();}
-				  	
+	document.getElementById('hand2').style.visibility="hidden";
+	document.getElementById('nob2-2').onclick=function() { step23();}
+	},800);			  	
 }				
-      function step23()
-	  {	  
+
+ function step23()
+{	  
         myStopFunction();  
 	    document.getElementById('nob2-2').style.visibility="hidden";
 	    document.getElementById('nob2-1').style.visibility="visible"
-	
-
+	    document.getElementById('nob2-1').onclick="";
+        setTimeout(function(){
 	    myInt = setInterval(function(){ animatearrow(); }, 500);
         document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 85px; top: 285px; height: 40px; z-index: 10;";
 			
@@ -399,33 +365,21 @@ function step22()
         document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
 		// Standard syntax
         document.getElementById("arrow1").style.transform = "rotate(180deg)";
-
-	    document.getElementById('nob2-1').onclick="";
-
-
-             
-
-				document.getElementById('stl2-2').onclick=function() { step24();}
-	  }				
+        document.getElementById('stl2-2').onclick=function() { step24();}
+		},800);
+}				
 					
             	
-				
-		function step24()
-		{
-  
-               myStopFunction();  
-				
-				
-				document.getElementById('stl2-2').style.visibility="hidden";
-			    document.getElementById('stl2-1').style.visibility="visible";
-			
-         
-
-	
-                document.getElementById('nob2-1').onclick="";
-				document.getElementById('stl2-1').onclick="";
-
- 				myInt = setInterval(function(){ animatearrow(); }, 500);
+function step24()
+{
+     myStopFunction();  
+	 document.getElementById('stl2-2').style.visibility="hidden";
+	 document.getElementById('stl2-1').style.visibility="visible";
+	 document.getElementById('nob2-1').onclick="";
+	 document.getElementById('stl2-1').onclick="";
+    setTimeout(function()
+	{
+ 	myInt = setInterval(function(){ animatearrow(); }, 500);
     document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 200px; top: 320px; height: 40px; z-index: 10;";
 			
     document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
@@ -433,49 +387,31 @@ function step22()
     document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
 		// Standard syntax
     document.getElementById("arrow1").style.transform = "rotate(180deg)";
-
-	setTimeout(function()
-	{
-             
-
-				document.getElementById('a3').onclick=function() { step25(); }
-			
-
-	}, 2000);
-
-	
-	
+    document.getElementById('a3').onclick=function() { step25(); }
+	}, 1000);
 }
  
 function step25()
 {
 	myStopFunction();
-	
-	
-		document.getElementById('a3').style.visibility="hidden";
-		document.getElementById('stl2-1').style.visibility="hidden";
-		document.getElementById('nob2-1').style.visibility="hidden";
-		document.getElementById('ca2-1').style.visibility="hidden";
-
-
-	    document.getElementById('a4').style.visibility="visible";
-	    document.getElementById('ca2-2').style.visibility="visible";
-		
-		document.getElementById('can2').innerHTML="Weight of pycnometer + 1/3rd of coarse aggregate(W<sub>2</sub>)="+values[lnt][1]+"gm";
-		document.getElementById('v2').innerHTML=+values[lnt][1]+".00gm";
-		document.getElementById('nextButton').style.visibility="visible";
-
-	
+	document.getElementById('a3').style.visibility="hidden";
+	document.getElementById('stl2-1').style.visibility="hidden";
+	document.getElementById('nob2-1').style.visibility="hidden";
+	document.getElementById('ca2-1').style.visibility="hidden";
+    document.getElementById('a4').style.visibility="visible";
+	document.getElementById('ca2-2').style.visibility="visible";
+	document.getElementById('can2').innerHTML="Weight of pycnometer + 1/3rd of coarse aggregate(W<sub>2</sub>)="+values[lnt][1]+"gm";
+	document.getElementById('v2').innerHTML=+values[lnt][1]+".00gm";
+	document.getElementById('nextButton').style.visibility="visible";	
 }
 
-	function step3()
+function step3()
 {
 	myStopFunction();
 	document.getElementById('stl3-1').style.visibility="hidden";
 	document.getElementById('stl3-2').style.visibility="visible";
     document.getElementById("stl3-2").onclick=""; 
-
-	setTimeout(function(){
+   	setTimeout(function(){
 	myInt = setInterval(function(){ animatearrow(); }, 500);
     document.getElementById('arrow1').style="visibility:visible ;position:absolute; left:240px; top: 240px; height: 40px; z-index: 10;";
 			
@@ -484,33 +420,21 @@ function step25()
     document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
 		// Standard syntax
     document.getElementById("arrow1").style.transform = "rotate(180deg)";
-	}, 1600);
-	
-	setTimeout(function()
-	{
-		                        document.getElementById("stl3-2").onclick=""; 
-
-				document.getElementById('nob3-1').onclick=function() { step31(); };
-
-	}, 1600);
+	document.getElementById('nob3-1').onclick=function() { step31(); };
+	}, 1200);
 }
 
 
 function step31()
 {
 	myStopFunction();
-	
-	
-		   document.getElementById('nob3-1').style.visibility="hidden";
-	       document.getElementById('nob3-2').style.visibility="visible";
-
-	         document.getElementById('nob3-2').onclick=""; 
-
-			document.getElementById("a5").onclick=""; 
-
-			setTimeout(function(){
-								                
-   document.getElementById('hand3').style.visibility="visible";
+	document.getElementById('nob3-1').style.visibility="hidden";
+	document.getElementById('nob3-2').style.visibility="visible";
+    document.getElementById("nob3-2").onclick=""; 
+    document.getElementById("stl3-2").onclick="";  
+    document.getElementById("a5").onclick=""; 
+    setTimeout(function(){
+	document.getElementById('hand3').style.visibility="visible";
 	myInt = setInterval(function(){ animatearrow(); }, 500);
     document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 470px; top: 210px; height: 40px; z-index: 10;";
 			
@@ -519,69 +443,51 @@ function step31()
     document.getElementById("arrow1").style.msTransform = "rotate(360deg)"; 
 		// Standard syntax
     document.getElementById("arrow1").style.transform = "rotate(360deg)";
-	}, 1600);
-	
-	setTimeout(function()
-	{
-
-		                        document.getElementById("nob3-2").onclick=""; 
-                                document.getElementById("stl3-2").onclick=""; 
-
-				document.getElementById('hand3').onclick=function() { step32(); };
-
-	}, 1600);
+	document.getElementById('hand3').onclick=function() { step32(); };
+	}, 1400);
 }
+
 function step32()
 {
     myStopFunction();
     document.getElementById('hand3').style.transformOrigin = "100% 80%";
 	document.getElementById('hand3').style.animation = "valveturn-4 1.5s forwards ";
-	
-			setTimeout(function()
-			{
-			document.getElementById('pw3').style.visibility="visible";
-
+	setTimeout(function()
+	{
+		document.getElementById('pw3').style.visibility="visible";
 		document.getElementById('w3').style.visibility="visible";
 	    document.getElementById('w3').style.animation = "water-5 1.8s 1 forwards";
-        	
-			setTimeout(function()
-			{	document.getElementById('pw3').style.visibility="hidden";
-			    document.getElementById('w3').style.visibility="hidden";
-                document.getElementById('lcb3-1').style.visibility="visible";
+        setTimeout(function()
+		{	document.getElementById('pw3').style.visibility="hidden";
+			document.getElementById('w3').style.visibility="hidden";
+            document.getElementById('lcb3-1').style.visibility="visible";
 					
-			},1000);
+		},1000);
 
-			},500);
-			
-	
-	
-	
-    document.getElementById('stl3-2').onclick="";
-
+	},500);
+	document.getElementById('stl3-2').onclick="";
+	setTimeout(function()
+	{
 	myInt = setInterval(function(){ animatearrow(); }, 500);
     document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 85px; top: 245px; height: 40px; z-index: 10;";
-			
-    document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
+	document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
 		// Code for IE9
     document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
 		// Standard syntax
     document.getElementById("arrow1").style.transform = "rotate(180deg)";
-	
-		          setTimeout(function()
-				  {				  
-                	document.getElementById('hand3').style.visibility="hidden";
-				  },800);
-				document.getElementById('nob3-2').onclick=function() { step33();}
-				  	
+	document.getElementById('hand3').style.visibility="hidden";
+	document.getElementById('nob3-2').onclick=function() { step33();}
+	},800);			  	
 }		
-  function step33()
-	  {	  
-        myStopFunction();  
-	    document.getElementById('nob3-2').style.visibility="hidden";
-	    document.getElementById('nob3-1').style.visibility="visible"
-	
-
-	    myInt = setInterval(function(){ animatearrow(); }, 500);
+  
+function step33()
+{	  
+   myStopFunction();  
+   document.getElementById('nob3-2').style.visibility="hidden";
+	document.getElementById('nob3-1').style.visibility="visible";
+	document.getElementById('nob3-1').onclick="";
+	setTimeout(function(){
+	   myInt = setInterval(function(){ animatearrow(); }, 500);
         document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 85px; top: 285px; height: 40px; z-index: 10;";
 			
         document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
@@ -589,33 +495,20 @@ function step32()
         document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
 		// Standard syntax
         document.getElementById("arrow1").style.transform = "rotate(180deg)";
-
-	    document.getElementById('nob3-1').onclick="";
-
-
-             
-
-				document.getElementById('stl3-2').onclick=function() { step34();}
-	  }				
+       document.getElementById('stl3-2').onclick=function() { step34();}
+	},500);
+}				
 					
-            	
-				
-		function step34()
-		{
-  
-               myStopFunction();  
-				
-				
-				document.getElementById('stl3-2').style.visibility="hidden";
-			    document.getElementById('stl3-1').style.visibility="visible";
-			
-         
-
-	
-                document.getElementById('nob3-1').onclick="";
-				document.getElementById('stl3-1').onclick="";
-
- 				myInt = setInterval(function(){ animatearrow(); }, 500);
+function step34()
+{
+     myStopFunction();  
+	document.getElementById('stl3-2').style.visibility="hidden";
+	document.getElementById('stl3-1').style.visibility="visible";
+	document.getElementById('nob3-1').onclick="";
+	document.getElementById('stl3-1').onclick="";
+    setTimeout(function()
+	{
+ 	myInt = setInterval(function(){ animatearrow(); }, 500);
     document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 200px; top: 320px; height: 40px; z-index: 10;";
 			
     document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
@@ -623,51 +516,28 @@ function step32()
     document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
 		// Standard syntax
     document.getElementById("arrow1").style.transform = "rotate(180deg)";
-
-	setTimeout(function()
-	{
-             
-
-				document.getElementById('a5').onclick=function() { step35(); }
-			
-
-	}, 2000);
-
-	
-	
+	document.getElementById('a5').onclick=function() { step35(); }
+	}, 1000);
 }
  
 function step35()
 {
-	myStopFunction();
-	
-	
-		document.getElementById('a5').style.visibility="hidden";
-		document.getElementById('stl3-1').style.visibility="hidden";
-		document.getElementById('nob3-1').style.visibility="hidden";
-		document.getElementById('lcb3-1').style.visibility="hidden";
-        document.getElementById('lcb3-2').style.visibility="visible";
-        document.getElementById('w3').style.visibility="hidden";
-
-
-	    document.getElementById('a6').style.visibility="visible";
-	    document.getElementById('ca3-1').style.visibility="visible";
-				    document.getElementById('ca3-2').style.visibility="hidden";
-
-	     document.getElementById('can3').innerHTML="Weight of pycnometer + 1/3rd of coarse aggregate +water (W<sub>3</sub>)="+values[lnt][2]+"gm";
-
-         document.getElementById('v3').innerHTML=+values[lnt][2]+".00gm";
-	
-	
-		document.getElementById('nextButton').style.visibility="visible";
-
-	
+    myStopFunction();
+	document.getElementById('a5').style.visibility="hidden";
+	document.getElementById('stl3-1').style.visibility="hidden";
+	document.getElementById('nob3-1').style.visibility="hidden";
+	document.getElementById('lcb3-1').style.visibility="hidden";
+    document.getElementById('lcb3-2').style.visibility="visible";
+    document.getElementById('w3').style.visibility="hidden";
+    document.getElementById('a6').style.visibility="visible";
+	document.getElementById('ca3-1').style.visibility="visible";
+	document.getElementById('ca3-2').style.visibility="hidden";
+    document.getElementById('can3').innerHTML="Weight of pycnometer + 1/3rd of coarse aggregate +water (W<sub>3</sub>)="+values[lnt][2]+"gm";
+    document.getElementById('v3').innerHTML=+values[lnt][2]+".00gm";
+	document.getElementById('nextButton').style.visibility="visible";
 }
 		
-
-
-
-	function step4()
+function step4()
 {
 	myStopFunction();
 	document.getElementById('stl4-1').style.visibility="hidden";
@@ -677,39 +547,26 @@ function step35()
 	setTimeout(function(){
 	myInt = setInterval(function(){ animatearrow(); }, 500);
     document.getElementById('arrow1').style="visibility:visible ;position:absolute; left:240px; top: 240px; height: 40px; z-index: 10;";
-			
-    document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
+	document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
 		// Code for IE9
     document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
 		// Standard syntax
     document.getElementById("arrow1").style.transform = "rotate(180deg)";
-	}, 1000);
-	
-	setTimeout(function()
-	{
-		                        document.getElementById("stl4-2").onclick=""; 
-
-				document.getElementById('nob4-1').onclick=function() { step41(); };
-
-	}, 1600);
+	document.getElementById('nob4-1').onclick=function() { step41(); };
+	}, 1200);
 }
 
 
 function step41()
 {
 	myStopFunction();
-	
-	
-		   document.getElementById('nob4-1').style.visibility="hidden";
-	       document.getElementById('nob4-2').style.visibility="visible";
-
+	document.getElementById('nob4-1').style.visibility="hidden";
+	document.getElementById('nob4-2').style.visibility="visible";
 	document.getElementById("a7").onclick=" ";
-	document.getElementById('nob4-2').onclick=""; 
-
-			setTimeout(function(){
-				    
-
-   document.getElementById('hand4').style.visibility="visible";
+	document.getElementById("nob4-2").onclick=""; 
+    document.getElementById("stl4-2").onclick=""; 
+	setTimeout(function(){
+	document.getElementById('hand4').style.visibility="visible";
 	myInt = setInterval(function(){ animatearrow(); }, 500);
     document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 470px; top: 210px; height: 40px; z-index: 10;";
 			
@@ -718,47 +575,36 @@ function step41()
     document.getElementById("arrow1").style.msTransform = "rotate(360deg)"; 
 		// Standard syntax
     document.getElementById("arrow1").style.transform = "rotate(360deg)";
-	}, 1600);
-	
-	setTimeout(function()
-	{
-
-		                        document.getElementById("nob4-2").onclick=""; 
-                                document.getElementById("stl4-2").onclick=""; 
-
-				document.getElementById('hand4').onclick=function() { step42(); };
-
+	document.getElementById('hand4').onclick=function() { step42(); };
 	}, 1600);
 }
+
+
 function step42()
 {
     myStopFunction();
     document.getElementById('hand4').style.transformOrigin = "100% 80%";
 	document.getElementById('hand4').style.animation = "valveturn-4 1.5s forwards ";
-	
-			setTimeout(function()
-			{
-			document.getElementById('pw4').style.visibility="visible";
+	setTimeout(function()
+	{
+		document.getElementById('pw4').style.visibility="visible";
 
 		document.getElementById('lw4').style.visibility="visible";
 	    document.getElementById('lw4').style.animation = "water-5 1.5s 1 reverse";
 	    document.getElementById('w4').style.visibility="visible";
 	    document.getElementById('w4').style.animation = "water-5 1.8s 1 forwards";
-        	
-			setTimeout(function()
-			{	document.getElementById('pw4').style.visibility="hidden";
-	            document.getElementById('lw4').style.visibility="hidden";
-			    document.getElementById('cb4').style.visibility="visible";
-	
-			},1000);
-
-			},500);
-			
-	
+        setTimeout(function()
+		{	
+		    document.getElementById('pw4').style.visibility="hidden";
+	        document.getElementById('lw4').style.visibility="hidden";
+			document.getElementById('cb4').style.visibility="visible";
+	    },1000);
+    },500);
 	document.getElementById('w4').style.visibility="hidden";
-	
-    document.getElementById('stl4-2').onclick="";
-
+	document.getElementById('stl4-2').onclick="";
+	setTimeout(function()
+	{
+	document.getElementById('hand4').style.visibility="hidden";
 	myInt = setInterval(function(){ animatearrow(); }, 500);
     document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 85px; top: 245px; height: 40px; z-index: 10;";
 			
@@ -767,22 +613,18 @@ function step42()
     document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
 		// Standard syntax
     document.getElementById("arrow1").style.transform = "rotate(180deg)";
+		document.getElementById('nob4-2').onclick=function() { step43();}
+	},800);			  	
+}	
 	
-		          setTimeout(function()
-				  {				  
-                	document.getElementById('hand4').style.visibility="hidden";
-				  },800);
-				document.getElementById('nob4-2').onclick=function() { step43();}
-				  	
-}		
-  function step43()
-	  {	  
+function step43()
+{	  
         myStopFunction();  
 	    document.getElementById('nob4-2').style.visibility="hidden";
-	    document.getElementById('nob4-1').style.visibility="visible"
-	
-
-	    myInt = setInterval(function(){ animatearrow(); }, 500);
+	    document.getElementById('nob4-1').style.visibility="visible";
+		document.getElementById('nob4-1').onclick="";
+		setTimeout(function(){
+		myInt = setInterval(function(){ animatearrow(); }, 500);
         document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 85px; top: 285px; height: 40px; z-index: 10;";
 			
         document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
@@ -790,33 +632,20 @@ function step42()
         document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
 		// Standard syntax
         document.getElementById("arrow1").style.transform = "rotate(180deg)";
-
-	    document.getElementById('nob4-1').onclick="";
-
-
-             
-
-				document.getElementById('stl4-2').onclick=function() { step44();}
-	  }				
+	    document.getElementById('stl4-2').onclick=function() { step44();}
+		},500);
+}				
 					
-            	
-				
-		function step44()
-		{
-  
-               myStopFunction();  
-				
-				
-				document.getElementById('stl4-2').style.visibility="hidden";
-			    document.getElementById('stl4-1').style.visibility="visible";
-			
-         
-
-	
-                document.getElementById('nob4-1').onclick="";
-				document.getElementById('stl4-1').onclick="";
-
- 				myInt = setInterval(function(){ animatearrow(); }, 500);
+function step44()
+{
+    myStopFunction();  
+	document.getElementById('stl4-2').style.visibility="hidden";
+    document.getElementById('stl4-1').style.visibility="visible";
+	document.getElementById('nob4-1').onclick="";
+	document.getElementById('stl4-1').onclick="";
+    setTimeout(function()
+	{
+ 	myInt = setInterval(function(){ animatearrow(); }, 500);
     document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 200px; top: 320px; height: 40px; z-index: 10;";
 			
     document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
@@ -824,18 +653,8 @@ function step42()
     document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
 		// Standard syntax
     document.getElementById("arrow1").style.transform = "rotate(180deg)";
-
-	setTimeout(function()
-	{
-             
-
-				document.getElementById('a7').onclick=function() { step45(); }
-			
-
-	}, 2000);
-
-	
-	
+    document.getElementById('a7').onclick=function() { step45(); }
+	}, 1000);
 }
  
 function step45()

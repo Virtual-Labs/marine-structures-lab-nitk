@@ -106,7 +106,7 @@ function magic()
 		 document.getElementById('trial').style="visibility:visible ;left: 700px; top: 100px;position: absolute;font-weight: bold;text-transform: uppercase;";
 		 document.getElementById('trial').innerHTML="Trial : " + repeat;
 
-			document.getElementById('nextButton').style.visibility="hidden";
+		 document.getElementById('nextButton').style.visibility="hidden";
 
 		
 		myInt = setInterval(function(){ animatearrow(); }, 500);
@@ -150,20 +150,17 @@ function magic()
 	{
 				refresh1();
 
-					 document.getElementById('flask3').style.visibility="visible";
-				 document.getElementById('nob3-1').style.visibility="visible";
-		
-	document.getElementById('cem3-1').style.visibility="visible";
-	document.getElementById('a5').style.visibility="hidden";
-	document.getElementById('a6').style.visibility="hidden";
-	document.getElementById('cem2-3').style.visibility="hidden";
-	    
-			document.getElementById('nextButton').style.visibility="hidden";
-
-		myInt = setInterval(function(){ animatearrow(); }, 500);
-		document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 190px; top: 190px; height: 40px; z-index: 10;";
+		 document.getElementById('flask3').style.visibility="visible";
+		 document.getElementById('nob3-1').style.visibility="visible";
+	     document.getElementById('cem3-1').style.visibility="visible";
+	     document.getElementById('a5').style.visibility="hidden";
+	     document.getElementById('a6').style.visibility="hidden";
+	     document.getElementById('cem2-3').style.visibility="hidden";
+	     document.getElementById('nextButton').style.visibility="hidden";
+     	 myInt = setInterval(function(){ animatearrow(); }, 500);
+		 document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 190px; top: 190px; height: 40px; z-index: 10;";
 			
-		document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
+		 document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
 		// Code for IE9
 		document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
 		// Standard syntax
@@ -176,12 +173,12 @@ function magic()
 	{
 				refresh1();
 
-		 document.getElementById('flask4').style.visibility="visible";
-				 document.getElementById('nob4-1').style.visibility="visible";
-document.getElementById('a11').style.visibility="hidden";
-	document.getElementById('a12').style.visibility="hidden";
-document.getElementById('k1').style.visibility="hidden";
-	document.getElementById('k2').style.visibility="hidden";	
+		document.getElementById('flask4').style.visibility="visible";
+		document.getElementById('nob4-1').style.visibility="visible";
+        document.getElementById('a11').style.visibility="hidden";
+	    document.getElementById('a12').style.visibility="hidden";
+        document.getElementById('k1').style.visibility="hidden";
+	    document.getElementById('k2').style.visibility="hidden";	
 		document.getElementById('nextButton').style.visibility="hidden";
 		myInt = setInterval(function(){ animatearrow(); }, 500);
 		document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 190px; top: 190px; height: 40px; z-index: 10;";
@@ -199,11 +196,11 @@ document.getElementById('k1').style.visibility="hidden";
 	{
 				refresh1();
 
-		 document.getElementById('flask5').style.visibility="visible";
-				 document.getElementById('nob5-1').style.visibility="visible";
-document.getElementById('a7').style.visibility="hidden";
-	document.getElementById('a8').style.visibility="hidden";
-document.getElementById('k3').style.visibility="hidden";
+		document.getElementById('flask5').style.visibility="visible";
+	    document.getElementById('nob5-1').style.visibility="visible";
+        document.getElementById('a7').style.visibility="hidden";
+	    document.getElementById('a8').style.visibility="hidden";
+        document.getElementById('k3').style.visibility="hidden";
 		document.getElementById('nextButton').style.visibility="hidden";
 		myInt = setInterval(function(){ animatearrow(); }, 500);
 		document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 190px; top: 190px; height: 40px; z-index: 10;";
@@ -235,10 +232,6 @@ document.getElementById('k3').style.visibility="hidden";
 		
 		document.getElementById('f1').style.visibility="visible";
 
-		
-		
-		
-		
 		if(repeat < 5 && repeat>0)
 		 {
 			
@@ -246,23 +239,24 @@ document.getElementById('k3').style.visibility="hidden";
 			 simsubscreennum=1;
 
             document.getElementById('k5').style.visibility="hidden";
-	document.getElementById('a9').style.visibility="hidden";
-	document.getElementById('a10').style.visibility="hidden";
-document.getElementById('k5').style.visibility="hidden";
-	document.getElementById('a9').style.visibility="hidden";
-	document.getElementById('a10').style.visibility="hidden";
-	document.getElementById('k5').style.visibility="hidden";
-	document.getElementById('a9').style.visibility="hidden";
-	document.getElementById('a10').style.visibility="hidden";
-document.getElementById('k5').style.visibility="hidden";
-	document.getElementById('a9').style.visibility="hidden";
-	document.getElementById('a10').style.visibility="hidden";
+	        document.getElementById('a9').style.visibility="hidden";
+	        document.getElementById('a10').style.visibility="hidden";
+            document.getElementById('k5').style.visibility="hidden";
+	        document.getElementById('a9').style.visibility="hidden";
+	        document.getElementById('a10').style.visibility="hidden";
+	        document.getElementById('k5').style.visibility="hidden";
+	        document.getElementById('a9').style.visibility="hidden";
+	        document.getElementById('a10').style.visibility="hidden";
+            document.getElementById('k5').style.visibility="hidden";
+	        document.getElementById('a9').style.visibility="hidden";
+	        document.getElementById('a10').style.visibility="hidden";
 	
 		 }
 			
 		
 		
 	}
+}
 
 	function step1()
 {
@@ -280,10 +274,7 @@ document.getElementById('k5').style.visibility="hidden";
 				document.getElementById('nextButton').style.visibility="visible";
          },500);
 		document.getElementById('can1').innerHTML="Empty weight of flask with stopper (W<sub>1</sub>)="+values[lnt][0]+" gm";
-		                document.getElementById('v1').innerHTML=+values[lnt][0]+" gm";
-
-
-
+		document.getElementById('v1').innerHTML=+values[lnt][0]+" gm";
 	}, 1200);
 }
 
@@ -293,6 +284,7 @@ document.getElementById('k5').style.visibility="hidden";
 	myStopFunction();
 	document.getElementById('nob').style.visibility="hidden";
 	document.getElementById('nob1').style.visibility="visible";
+	document.getElementById("nob1").onclick="";
 	setTimeout(function(){
    document.getElementById('hand').style.visibility="visible";
 	myInt = setInterval(function(){ animatearrow(); }, 500);
@@ -303,14 +295,8 @@ document.getElementById('k5').style.visibility="hidden";
     document.getElementById("arrow1").style.msTransform = "rotate(360deg)"; 
 		// Standard syntax
     document.getElementById("arrow1").style.transform = "rotate(360deg)";
-	}, 1000);
-	
-	setTimeout(function()
-	{
-                document.getElementById("nob1").onclick=""; 
-				document.getElementById('hand').onclick=function() { step21(); };
-
-	}, 1600);
+     document.getElementById('hand').onclick=function() { step21(); };
+	}, 1200);
 }
 
 
@@ -320,23 +306,19 @@ function step21()
 	
 	document.getElementById('hand').style.transformOrigin = "100% 80%";
 	document.getElementById('hand').style.animation = "valveturn-4 1.5s forwards ";
-			
-			setTimeout(function()
-			{
-			document.getElementById('cem2-4').style.visibility="visible";
-
+	setTimeout(function()
+	{
+		 document.getElementById('cem2-4').style.visibility="visible";
 		document.getElementById('cem2-1').style.visibility="visible";
 	document.getElementById('cem2-1').style.animation = "water-5 1.5s 1 reverse";
 	document.getElementById('cem2-2').style.visibility="visible";
 	document.getElementById('cem2-2').style.animation = "water-5 1.8s 1 forwards";
-				
-
-			},500);
+	},500);
    
 	setTimeout(function()
 	{
 		document.getElementById('cem2-4').style.visibility="hidden";
-					document.getElementById('cem2-1').style.visibility="hidden";
+		document.getElementById('cem2-1').style.visibility="hidden";
         document.getElementById('hand').style.visibility="hidden";
 		myInt = setInterval(function(){ animatearrow(); }, 500);
     document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 150px; top: 190px; height: 40px; z-index: 10;";
@@ -349,29 +331,29 @@ function step21()
    					
     document.getElementById('nob1').onclick=function() { step22(); };
 
-       }, 1800);
-}}
+    }, 1800);
+}
+
 	
 function step22()
 {
-myStopFunction();
-				document.getElementById('nob1').style.visibility="hidden";
-			document.getElementById('nob2').style.visibility="visible";
-						document.getElementById('cflask').style.visibility="visible";
-
-			myInt = setInterval(function(){ animatearrow(); }, 500);
-		document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 190px; top: 300px; height: 40px; z-index: 10;";
+    myStopFunction();
+	document.getElementById('nob1').style.visibility="hidden";
+	document.getElementById('nob2').style.visibility="visible";
+	document.getElementById('cflask').style.visibility="visible";
+	setTimeout(function()
+	{
+    myInt = setInterval(function(){ animatearrow(); }, 500);
+	document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 190px; top: 300px; height: 40px; z-index: 10;";
 			
-		document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
+	document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
 		// Code for IE9
-		document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
+	document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
 		// Standard syntax
-		document.getElementById("arrow1").style.transform = "rotate(180deg)";
-		setTimeout(function()
-		{
-            					document.getElementById('cflask').onclick=function() { step23(); };
+	document.getElementById("arrow1").style.transform = "rotate(180deg)";
+	document.getElementById('cflask').onclick=function() { step23(); };
 
- }, 1600);
+ }, 1300);
 }
  
 function step23()
@@ -413,6 +395,7 @@ function step3()
 	myStopFunction();
 	document.getElementById('nob3-1').style.visibility="hidden";
 	document.getElementById('nob3-2').style.visibility="visible";
+	document.getElementById("nob3-2").onclick=""; 
 	setTimeout(function(){
    document.getElementById('hand3').style.visibility="visible";
 	myInt = setInterval(function(){ animatearrow(); }, 500);
@@ -423,15 +406,8 @@ function step3()
     document.getElementById("arrow1").style.msTransform = "rotate(360deg)"; 
 		// Standard syntax
     document.getElementById("arrow1").style.transform = "rotate(360deg)";
-	}, 1000);
-	
-	setTimeout(function()
-	{
-		                        document.getElementById("nob3-2").onclick=""; 
-
-				document.getElementById('hand3').onclick=function() { step31(); };
-
-	}, 1600);
+	document.getElementById('hand3').onclick=function() { step31(); };
+	}, 1200);
 }
 
 
@@ -447,43 +423,38 @@ function step31()
 							document.getElementById('kero3-4').style.visibility="visible";
 
 		document.getElementById('ker3-1').style.visibility="visible";
-	document.getElementById('ker3-1').style.animation = "water-5 1.5s 1 reverse";
-	document.getElementById('ker3-2').style.visibility="visible";
-	document.getElementById('ker3-2').style.animation = "water-5 4.5s 1 forwards";
-			},250);
-
+	    document.getElementById('ker3-1').style.animation = "water-5 1.5s 1 reverse";
+	    document.getElementById('ker3-2').style.visibility="visible";
+	    document.getElementById('ker3-2').style.animation = "water-5 4.5s 1 forwards";
+	},250);
 	setTimeout(function()
 	{
-					document.getElementById('kero3-4').style.visibility="hidden";
-
-					document.getElementById('ker3-1').style.visibility="hidden";
-					document.getElementById('ker3-2').style.visibility="visible";
-					//document.getElementById('kc3-1').style.visibility="visible";
-
-										
-        document.getElementById('hand3').style.visibility="hidden";
+		document.getElementById('kero3-4').style.visibility="hidden";
+        document.getElementById('ker3-1').style.visibility="hidden";
+		document.getElementById('ker3-2').style.visibility="visible";
+		document.getElementById('hand3').style.visibility="hidden";
 		myInt = setInterval(function(){ animatearrow(); }, 500);
-    document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 150px; top: 190px; height: 40px; z-index: 10;";
+        document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 150px; top: 190px; height: 40px; z-index: 10;";
 			
-    document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
+        document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
 		// Code for IE9
-    document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
+        document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
 		// Standard syntax
-    document.getElementById("arrow1").style.transform = "rotate(180deg)";
-					document.getElementById('nob3-2').onclick=function() { step32(); };
-
+        document.getElementById("arrow1").style.transform = "rotate(180deg)";
+		document.getElementById('nob3-2').onclick=function() { step32(); };
        }, 1600);
 }
 
 	
 function step32()
 {
-myStopFunction();
-				document.getElementById('nob3-2').style.visibility="hidden";
-			document.getElementById('nob3-3').style.visibility="visible";
-						document.getElementById('cflask3').style.visibility="visible";
-
-			myInt = setInterval(function(){ animatearrow(); }, 500);
+     myStopFunction();
+	 document.getElementById('nob3-2').style.visibility="hidden";
+	 document.getElementById('nob3-3').style.visibility="visible";
+	 document.getElementById('cflask3').style.visibility="visible";
+     setTimeout(function()
+	{
+		 myInt = setInterval(function(){ animatearrow(); }, 500);
 		document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 190px; top: 300px; height: 40px; z-index: 10;";
 			
 		document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
@@ -491,22 +462,20 @@ myStopFunction();
 		document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
 		// Standard syntax
 		document.getElementById("arrow1").style.transform = "rotate(180deg)";
-		setTimeout(function()
-		{
-            					document.getElementById('cflask3').onclick=function() { step33(); };
+		document.getElementById('cflask3').onclick=function() { step33(); };
 
- }, 1600);
+    }, 1300);
 }
  
 function step33()
 {
 	myStopFunction();
-		document.getElementById('cflask3').style.visibility="hidden";
+	document.getElementById('cflask3').style.visibility="hidden";
 
 	document.getElementById('flask3').style.visibility="hidden";
 	document.getElementById('nob3-3').style.visibility="hidden";
 	document.getElementById('ker3-2').style.visibility="hidden";
-		document.getElementById('cem3-1').style.visibility="hidden";
+	document.getElementById('cem3-1').style.visibility="hidden";
 
 	setTimeout(function(){
 		document.getElementById('k1').style.visibility="visible";
@@ -526,11 +495,12 @@ function step33()
 	}, 1200);
 }
 
-	function step4()
+function step4()
 {
 	myStopFunction();
 	document.getElementById('nob4-1').style.visibility="hidden";
 	document.getElementById('nob4-2').style.visibility="visible";
+	document.getElementById("nob4-2").onclick=""; 
 	setTimeout(function(){
    document.getElementById('hand4').style.visibility="visible";
 	myInt = setInterval(function(){ animatearrow(); }, 500);
@@ -541,63 +511,52 @@ function step33()
     document.getElementById("arrow1").style.msTransform = "rotate(360deg)"; 
 		// Standard syntax
     document.getElementById("arrow1").style.transform = "rotate(360deg)";
-	}, 1000);
-	
-	setTimeout(function()
-	{
-		                        document.getElementById("nob4-2").onclick=""; 
-
-				document.getElementById('hand4').onclick=function() { step41(); };
-
-	}, 1600);
+	document.getElementById('hand4').onclick=function() { step41(); };
+	}, 1200);
 }
 
 
 function step41()
 {
 	myStopFunction();
-	
 	document.getElementById('hand4').style.transformOrigin = "100% 80%";
 	document.getElementById('hand4').style.animation = "valveturn-4 1.5s forwards ";
-			
-			setTimeout(function()
-			{
-			document.getElementById('kero4-3').style.visibility="visible";
-
-		document.getElementById('kero4-1').style.visibility="visible";
-	document.getElementById('kero4-1').style.animation = "water-5 1.5s 1 reverse";
-	document.getElementById('kero4-2').style.visibility="visible";
-	document.getElementById('kero4-2').style.animation = "water-5 1.8s 1 forwards";
-				
-
-			},500);
+	setTimeout(function()
+	{
+		 document.getElementById('kero4-3').style.visibility="visible";
+		 document.getElementById('kero4-1').style.visibility="visible";
+	     document.getElementById('kero4-1').style.animation = "water-5 1.5s 1 reverse";
+	     document.getElementById('kero4-2').style.visibility="visible";
+	     document.getElementById('kero4-2').style.animation = "water-5 1.8s 1 forwards";
+	},500);
    
 	setTimeout(function()
 	{
 		document.getElementById('kero4-3').style.visibility="hidden";
-					document.getElementById('kero4-1').style.visibility="hidden";
+		document.getElementById('kero4-1').style.visibility="hidden";
         document.getElementById('hand4').style.visibility="hidden";
 		myInt = setInterval(function(){ animatearrow(); }, 500);
-    document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 150px; top: 190px; height: 40px; z-index: 10;";
+       document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 150px; top: 190px; height: 40px; z-index: 10;";
 			
-    document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
+       document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
 		// Code for IE9
-    document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
+       document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
 		// Standard syntax
-    document.getElementById("arrow1").style.transform = "rotate(180deg)";
-					document.getElementById('nob4-2').onclick=function() { step42(); };
+       document.getElementById("arrow1").style.transform = "rotate(180deg)";
+		 document.getElementById('nob4-2').onclick=function() { step42(); };
 
        }, 1800);
 }
 	
 function step42()
 {
-myStopFunction();
-				document.getElementById('nob4-2').style.visibility="hidden";
-			document.getElementById('nob4-3').style.visibility="visible";
-									document.getElementById('cflask4').style.visibility="visible";
-
-			myInt = setInterval(function(){ animatearrow(); }, 500);
+        myStopFunction();
+		document.getElementById('nob4-2').style.visibility="hidden";
+		document.getElementById('nob4-3').style.visibility="visible";
+		document.getElementById('cflask4').style.visibility="visible";
+       setTimeout(function()
+		{
+		myInt = setInterval(function(){ animatearrow(); }, 500);
 		document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 190px; top: 300px; height: 40px; z-index: 10;";
 			
 		document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
@@ -605,11 +564,9 @@ myStopFunction();
 		document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
 		// Standard syntax
 		document.getElementById("arrow1").style.transform = "rotate(180deg)";
-		setTimeout(function()
-		{
-            					document.getElementById('cflask4').onclick=function() { step43(); };
+		document.getElementById('cflask4').onclick=function() { step43(); };
 
- }, 1600);
+        }, 1300);
 }
  
 function step43()
@@ -643,6 +600,7 @@ function step5()
 	myStopFunction();
 	document.getElementById('nob5-1').style.visibility="hidden";
 	document.getElementById('nob5-2').style.visibility="visible";
+	document.getElementById("nob1").onclick=""; 
 	setTimeout(function(){
    document.getElementById('hand5').style.visibility="visible";
 	myInt = setInterval(function(){ animatearrow(); }, 500);
@@ -653,15 +611,8 @@ function step5()
     document.getElementById("arrow1").style.msTransform = "rotate(360deg)"; 
 		// Standard syntax
     document.getElementById("arrow1").style.transform = "rotate(360deg)";
-	}, 1000);
-	
-	setTimeout(function()
-	{
-		                        document.getElementById("nob1").onclick=""; 
-
-				document.getElementById('hand5').onclick=function() { step51(); };
-
-	}, 1600);
+	document.getElementById('hand5').onclick=function() { step51(); };
+	}, 1200);
 }
 
 
@@ -671,45 +622,40 @@ function step51()
 	
 	document.getElementById('hand5').style.transformOrigin = "100% 80%";
 	document.getElementById('hand5').style.animation = "valveturn-4 1.5s forwards ";
-			
-			setTimeout(function()
-			{
-			document.getElementById('wtr2').style.visibility="visible";
-
-		//document.getElementById('wtr3').style.visibility="visible";
-	//document.getElementById('wtr3').style.animation = "water-5 1.5s 1 reverse";
-	document.getElementById('wtr').style.visibility="visible";
-	document.getElementById('wtr').style.animation = "water-5 1.8s 1 forwards";
-				
-
-			},500);
+	setTimeout(function()
+	{
+		document.getElementById('wtr2').style.visibility="visible";
+		document.getElementById('wtr').style.visibility="visible";
+	    document.getElementById('wtr').style.animation = "water-5 1.8s 1 forwards";
+	},500);
    
 	setTimeout(function()
 	{
 		document.getElementById('wtr2').style.visibility="hidden";
-					document.getElementById('wtr3').style.visibility="hidden";
+		document.getElementById('wtr3').style.visibility="hidden";
         document.getElementById('hand5').style.visibility="hidden";
 		myInt = setInterval(function(){ animatearrow(); }, 500);
-    document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 150px; top: 190px; height: 40px; z-index: 10;";
+        document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 150px; top: 190px; height: 40px; z-index: 10;";
 			
-    document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
+         document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
 		// Code for IE9
-    document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
+         document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
 		// Standard syntax
-    document.getElementById("arrow1").style.transform = "rotate(180deg)";
-					document.getElementById('nob5-2').onclick=function() { step52(); };
+         document.getElementById("arrow1").style.transform = "rotate(180deg)";
+		 document.getElementById('nob5-2').onclick=function() { step52(); };
 
        }, 1800);
 }
 	
 function step52()
 {
-myStopFunction();
-				document.getElementById('nob5-2').style.visibility="hidden";
-			document.getElementById('nob5-3').style.visibility="visible";
-						document.getElementById('cflask5').style.visibility="visible";
-
-			myInt = setInterval(function(){ animatearrow(); }, 500);
+     myStopFunction();
+	 document.getElementById('nob5-2').style.visibility="hidden";
+	 document.getElementById('nob5-3').style.visibility="visible";
+	 document.getElementById('cflask5').style.visibility="visible";
+     setTimeout(function()
+	 {
+		 myInt = setInterval(function(){ animatearrow(); }, 500);
 		document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 190px; top: 300px; height: 40px; z-index: 10;";
 			
 		document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
@@ -717,27 +663,24 @@ myStopFunction();
 		document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
 		// Standard syntax
 		document.getElementById("arrow1").style.transform = "rotate(180deg)";
-		setTimeout(function()
-		{
-            					document.getElementById('cflask5').onclick=function() { step53(); };
+		document.getElementById('cflask5').onclick=function() { step53(); };
 
- }, 1600);
+     }, 1300);
 }
  
 function step53()
 {
 	myStopFunction();
 	document.getElementById('flask5').style.visibility="hidden";
-		document.getElementById('cflask5').style.visibility="hidden";
+	document.getElementById('cflask5').style.visibility="hidden";
 
 	document.getElementById('nob5-3').style.visibility="hidden";
 	document.getElementById('wtr').style.visibility="hidden";
 	setTimeout(function(){
-		document.getElementById('k5').style.visibility="visible";
+	document.getElementById('k5').style.visibility="visible";
 	document.getElementById('a9').style.visibility="visible";
 	document.getElementById('a10').style.visibility="visible";
-	
-	}, 500);
+    }, 500);
 	setTimeout(function()
 	{
 		setTimeout(function()

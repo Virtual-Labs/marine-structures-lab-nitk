@@ -74,6 +74,8 @@ function magic()
 		document.getElementById('sand').style.visibility="hidden";
 	
 		document.getElementById('nextButton').style.visibility="hidden";
+		setTimeout(function()
+		{
 		myInt = setInterval(function(){ animatearrow(); }, 500);
 		
 		document.getElementById('trial').style="visibility:visible ;left: 700px; top: 100px;position: absolute;font-weight: bold;text-transform: uppercase;";
@@ -86,7 +88,8 @@ function magic()
 		document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
 		// Standard syntax
 		document.getElementById("arrow1").style.transform = "rotate(180deg)";
-		document.getElementById('a1').onclick=function() { step2(); };  	   
+		document.getElementById('a1').onclick=function() { step2(); };  
+		},500);		
 	}
 	else if (simsubscreennum==3)
 	{
@@ -98,6 +101,7 @@ function magic()
 			refresh1();
             document.getElementById('a2').style.visibility="hidden";
             document.getElementById('nextButton').style.visibility="hidden";
+			setTimeout(function(){
 		    document.getElementById('trial').style="visibility:visible ;left: 700px; top: 100px;position: absolute;font-weight: bold;text-transform: uppercase;";
 		    document.getElementById('trial').innerHTML="Trial : " + repeat;
 		    myInt = setInterval(function(){ animatearrow(); }, 500);
@@ -108,6 +112,7 @@ function magic()
 		    // Standard syntax
 		    document.getElementById("arrow1").style.transform = "rotate(180deg)";
 		    document.getElementById('stl3-1').onclick=function() { step3(); };
+			},800);
 		}
 		else
 		{
@@ -125,6 +130,7 @@ function magic()
             document.getElementById('nextButton').style.visibility="hidden";
 		    document.getElementById('trial').style="visibility:visible ;left:700px; top:100px; position: absolute;font-weight: bold;text-transform: uppercase;";
 		    document.getElementById('trial').innerHTML="Trial : " + repeat;
+			setTimeout(function(){
 		    myInt = setInterval(function(){ animatearrow(); }, 500);
 		    document.getElementById('arrow1').style="visibility:visible ;position:absolute; left:240px; top: 270px; height: 40px; z-index: 10;";
             document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
@@ -133,6 +139,7 @@ function magic()
 		    // Standard syntax
 		    document.getElementById("arrow1").style.transform = "rotate(180deg)";
 	        document.getElementById('stl3-1').onclick=function() { step3(); };
+			},500);
 		}
 	}
 	else if (simsubscreennum==4)
@@ -154,6 +161,7 @@ function magic()
 			document.getElementById('wbs3').style.visibility="hidden";
             document.getElementById('bs4').style.visibility="visible";
 		}
+		setTimeout(function(){
 		myInt = setInterval(function(){ animatearrow(); }, 500);
 		document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 240px; top: 270px; height: 40px; z-index: 10;";
 		document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
@@ -162,6 +170,7 @@ function magic()
 		// Standard syntax
 		document.getElementById("arrow1").style.transform = "rotate(180deg)";
 		document.getElementById('stl4-1').onclick=function() { step4(); };
+		},800);
     }
 	else if (simsubscreennum==5)
 	{
@@ -265,13 +274,9 @@ function step3()
         document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
 		// Standard syntax
         document.getElementById("arrow1").style.transform = "rotate(180deg)";
-	}, 1000);
-	
-	setTimeout(function()
-	{
 		document.getElementById("stl3-2").onclick=""; 
         document.getElementById('nob3-1').onclick=function() { step31(); };
-    }, 1600);
+    }, 1000);
 }
 
 
@@ -282,30 +287,53 @@ function step31()
 	document.getElementById('nob3-2').style.visibility="visible";
     document.getElementById('a3').onclick=""; 
 	document.getElementById('nob3-2').onclick=""; 
+	document.getElementById("nob3-2").onclick=""; 
+    document.getElementById("stl3-2").onclick="";
     setTimeout(function(){
-	    document.getElementById('hand3').style.visibility="visible";
+		if(flag==1)
+		{
+	    document.getElementById('hand3r').style.visibility="visible";
+		}
+		else if(flag==2)
+		{
+			document.getElementById('hand3b').style.visibility="visible";
+		}
+    
+    	
 	    myInt = setInterval(function(){ animatearrow(); }, 500);
-        document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 465px; top: 200px; height: 40px; z-index: 10;";
+        document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 580px; top: 130px; height: 40px; z-index: 10;";
 		document.getElementById("arrow1").style.WebkitTransform = "rotate(360deg)"; 
 		// Code for IE9
         document.getElementById("arrow1").style.msTransform = "rotate(360deg)"; 
 		// Standard syntax
         document.getElementById("arrow1").style.transform = "rotate(360deg)";
-	}, 1600);
-	setTimeout(function()
-	{
-        document.getElementById("nob3-2").onclick=""; 
-        document.getElementById("stl3-2").onclick=""; 
-        document.getElementById('hand3').onclick=function() { step32(); };
-    }, 1600);
+	
+         
+		if(flag==1)
+		{
+            document.getElementById('hand3r').onclick=function() { step32(); };
+		}
+		else if(flag==2)
+		{
+		    document.getElementById('hand3b').onclick=function() { step32(); };
+		}
+    }, 1400);
 }
 
 	
 function step32()
 {
     myStopFunction();
-    document.getElementById('hand3').style.transformOrigin = "100% 80%";
-	document.getElementById('hand3').style.animation = "valveturn-4 1.5s forwards ";
+	if(flag==1)
+	{
+    document.getElementById('hand3r').style.transformOrigin = "100% 80%";
+	document.getElementById('hand3r').style.animation = "valveturn-4 1.5s forwards ";
+	}
+	else if(flag==2)
+	{
+	document.getElementById('hand3b').style.transformOrigin = "100% 80%";
+	document.getElementById('hand3b').style.animation = "valveturn-4 1.5s forwards ";
+	}
 	if(flag==1)
 	{
 		setTimeout(function()
@@ -338,7 +366,19 @@ function step32()
 		    },1000);
 		},500);
 	}
+	setTimeout(function()
+	{		
+        if(flag==1)
+		{			
+             document.getElementById('hand3r').style.visibility="hidden";
+		}
+	    else if(flag==2)
+		{
+			 document.getElementById('hand3b').style.visibility="hidden";
+		}
+	},800);
 	document.getElementById('stl3-2').onclick="";
+	setTimeout(function(){
     myInt = setInterval(function(){ animatearrow(); }, 500);
     document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 85px; top: 245px; height: 40px; z-index: 10;";
 	document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
@@ -346,17 +386,16 @@ function step32()
     document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
 	// Standard syntax
     document.getElementById("arrow1").style.transform = "rotate(180deg)";
-	setTimeout(function()
-	{				  
-        document.getElementById('hand3').style.visibility="hidden";
-	},800);
+	
 	document.getElementById('nob3-2').onclick=function() { step33();}
+	},1600);
 }				
 function step33()
 {	  
     myStopFunction();  
 	document.getElementById('nob3-2').style.visibility="hidden";
 	document.getElementById('nob3-1').style.visibility="visible"
+	setTimeout(function(){
 	myInt = setInterval(function(){ animatearrow(); }, 500);
     document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 85px; top: 285px; height: 40px; z-index: 10;";
 	document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
@@ -366,6 +405,7 @@ function step33()
     document.getElementById("arrow1").style.transform = "rotate(180deg)";
     document.getElementById('nob3-1').onclick="";
     document.getElementById('stl3-2').onclick=function() { step34();}
+	},500);
 }				
 function step34()
 {
@@ -374,6 +414,8 @@ function step34()
 	document.getElementById('stl3-1').style.visibility="visible";
 	document.getElementById('nob3-1').onclick="";
 	document.getElementById('stl3-1').onclick="";
+	setTimeout(function()
+	{
     myInt = setInterval(function(){ animatearrow(); }, 500);
     document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 200px; top: 320px; height: 40px; z-index: 10;";
 	document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
@@ -381,10 +423,8 @@ function step34()
     document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
 	// Standard syntax
     document.getElementById("arrow1").style.transform = "rotate(180deg)";
-    setTimeout(function()
-	{
-        document.getElementById('a3').onclick=function() { step35(); }
-	}, 2000);
+       document.getElementById('a3').onclick=function() { step35(); }
+	}, 1000);
 }
 function step35()
 {
@@ -419,7 +459,7 @@ function step4()
 	myStopFunction();
 	document.getElementById('stl4-1').style.visibility="hidden";
 	document.getElementById('stl4-2').style.visibility="visible";
-    document.getElementById("stl4-2").onclick=""; 
+    document.getElementById("stl4-2").onclick="";
     setTimeout(function(){
 	myInt = setInterval(function(){ animatearrow(); }, 500);
     document.getElementById('arrow1').style="visibility:visible ;position:absolute; left:240px; top: 240px; height: 40px; z-index: 10;";
@@ -428,12 +468,8 @@ function step4()
     document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
     // Standard syntax
     document.getElementById("arrow1").style.transform = "rotate(180deg)";
-	}, 1600);
-	setTimeout(function()
-	{
-		document.getElementById("stl4-2").onclick=""; 
-        document.getElementById('nob4-1').onclick=function() { step41(); };
-    }, 1600);
+	        document.getElementById('nob4-1').onclick=function() { step41(); };
+    }, 1200);
 }
 function step41()
 {
@@ -442,6 +478,7 @@ function step41()
 	document.getElementById('nob4-2').style.visibility="visible";
     document.getElementById('nob4-2').onclick=""; 
     document.getElementById("a5").onclick=""; 
+	document.getElementById("stl4-2").onclick=""; 
     setTimeout(function()
 	{
 		document.getElementById('hand4').style.visibility="visible";
@@ -452,14 +489,8 @@ function step41()
         document.getElementById("arrow1").style.msTransform = "rotate(360deg)"; 
 		// Standard syntax
         document.getElementById("arrow1").style.transform = "rotate(360deg)";
-	}, 1600);
-	
-	setTimeout(function()
-	{
-        document.getElementById("nob4-2").onclick=""; 
-        document.getElementById("stl4-2").onclick=""; 
-        document.getElementById('hand4').onclick=function() { step42(); };
-    }, 1600);
+       document.getElementById('hand4').onclick=function() { step42(); };
+    }, 1400);
 }
 function step42()
 {
@@ -491,6 +522,11 @@ function step42()
             }
 		},1000);
     },500);
+	setTimeout(function()
+	{				  
+        document.getElementById('hand4').style.visibility="hidden";
+	},800);
+	setTimeout(function(){
 	document.getElementById('stl4-2').onclick="";
     myInt = setInterval(function(){ animatearrow(); }, 500);
     document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 85px; top: 245px; height: 40px; z-index: 10;";
@@ -499,17 +535,17 @@ function step42()
     document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
 	// Standard syntax
     document.getElementById("arrow1").style.transform = "rotate(180deg)";
-    setTimeout(function()
-	{				  
-        document.getElementById('hand4').style.visibility="hidden";
-	},800);
+    
 	document.getElementById('nob4-2').onclick=function() { step43();}
+	},1500);
 }		
 function step43()
 {	  
     myStopFunction();  
 	document.getElementById('nob4-2').style.visibility="hidden";
-	document.getElementById('nob4-1').style.visibility="visible"
+	document.getElementById('nob4-1').style.visibility="visible";
+	document.getElementById('nob4-1').onclick="";
+	setTimeout(function(){
 	myInt = setInterval(function(){ animatearrow(); }, 500);
     document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 85px; top: 285px; height: 40px; z-index: 10;";
 	document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
@@ -517,8 +553,9 @@ function step43()
     document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
     // Standard syntax
     document.getElementById("arrow1").style.transform = "rotate(180deg)";
-    document.getElementById('nob4-1').onclick="";
+    
     document.getElementById('stl4-2').onclick=function() { step44();}
+	},500);
 }				
 function step44()
 {
@@ -527,6 +564,8 @@ function step44()
 	document.getElementById('stl4-1').style.visibility="visible";
     document.getElementById('nob4-1').onclick="";
 	document.getElementById('stl4-1').onclick="";
+	setTimeout(function()
+	{
     myInt = setInterval(function(){ animatearrow(); }, 500);
     document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 200px; top: 320px; height: 40px; z-index: 10;";
 	document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
@@ -534,10 +573,9 @@ function step44()
     document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
 	// Standard syntax
     document.getElementById("arrow1").style.transform = "rotate(180deg)";
-    setTimeout(function()
-	{
+    
         document.getElementById('a5').onclick=function() { step45(); }
-	}, 2000);
+	}, 1000);
 }
  
 function step45()
@@ -587,12 +625,8 @@ function step5()
         document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
 	    // Standard syntax
         document.getElementById("arrow1").style.transform = "rotate(180deg)";
-	}, 1000);
-	setTimeout(function()
-	{
-		document.getElementById("stl5-2").onclick=""; 
         document.getElementById('nob5-1').onclick=function() { step51(); };
-    }, 1600);
+    }, 1200);
 }
 
 
@@ -601,8 +635,9 @@ function step51()
 	myStopFunction();
 	document.getElementById('nob5-1').style.visibility="hidden";
 	document.getElementById('nob5-2').style.visibility="visible";
-    document.getElementById("a7").onclick=" ";
-	document.getElementById('nob5-2').onclick=""; 
+    document.getElementById("a7").onclick="";
+	document.getElementById('nob5-2').onclick="";
+    document.getElementById("stl5-2").onclick=""; 	
     setTimeout(function()
 	{
 		document.getElementById('hand5').style.visibility="visible";
@@ -613,13 +648,8 @@ function step51()
         document.getElementById("arrow1").style.msTransform = "rotate(360deg)"; 
 		// Standard syntax
         document.getElementById("arrow1").style.transform = "rotate(360deg)";
-	}, 1600);
-	setTimeout(function()
-	{
-        document.getElementById("nob5-2").onclick=""; 
-        document.getElementById("stl5-2").onclick=""; 
-        document.getElementById('hand5').onclick=function() { step52(); };
-    }, 1600);
+	    document.getElementById('hand5').onclick=function() { step52(); };
+    }, 1400);
 }
 function step52()
 {
@@ -641,26 +671,29 @@ function step52()
 	    },1000);
 
 	},500);
+	setTimeout(function()
+	{				  
+        document.getElementById('hand5').style.visibility="hidden";
+	},800);
 	document.getElementById('w5').style.visibility="hidden";
 	document.getElementById('stl5-2').onclick="";
+	setTimeout(function(){
     myInt = setInterval(function(){ animatearrow(); }, 500);
     document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 85px; top: 245px; height: 40px; z-index: 10;";
 	document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
 	// Code for IE9
     document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
 	// Standard syntax
-    document.getElementById("arrow1").style.transform = "rotate(180deg)";
-	setTimeout(function()
-	{				  
-        document.getElementById('hand5').style.visibility="hidden";
-	},800);
-		document.getElementById('nob5-2').onclick=function() { step53();}
+    document.getElementById("arrow1").style.transform = "rotate(180deg)";	
+	document.getElementById('nob5-2').onclick=function() { step53();}
+	},1600);
 }		
 function step53()
 {	  
     myStopFunction();  
 	document.getElementById('nob5-2').style.visibility="hidden";
-	document.getElementById('nob5-1').style.visibility="visible"
+	document.getElementById('nob5-1').style.visibility="visible";
+	setTimeout(function(){
 	myInt = setInterval(function(){ animatearrow(); }, 500);
     document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 85px; top: 285px; height: 40px; z-index: 10;";
 	document.getElementById("arrow1").style.WebkitTransform = "rotate(180deg)"; 
@@ -670,6 +703,7 @@ function step53()
     document.getElementById("arrow1").style.transform = "rotate(180deg)";
     document.getElementById('nob5-1').onclick="";
     document.getElementById('stl5-2').onclick=function() { step54();}
+	},500);
 }				
 function step54()
 {
@@ -678,6 +712,8 @@ function step54()
 	document.getElementById('stl5-1').style.visibility="visible";
 	document.getElementById('nob5-1').onclick="";
 	document.getElementById('stl5-1').onclick="";
+	setTimeout(function()
+	{
     myInt = setInterval(function(){ animatearrow(); }, 500);
     document.getElementById('arrow1').style="visibility:visible ;position:absolute; left: 200px; top: 320px; height: 40px; z-index: 10;";
 			
@@ -685,19 +721,9 @@ function step54()
 		// Code for IE9
     document.getElementById("arrow1").style.msTransform = "rotate(180deg)"; 
 		// Standard syntax
-    document.getElementById("arrow1").style.transform = "rotate(180deg)";
-
-	setTimeout(function()
-	{
-             
-
-				document.getElementById('a7').onclick=function() { step55(); }
-			
-
-	}, 2000);
-
-	
-	
+    document.getElementById("arrow1").style.transform = "rotate(180deg)";			
+	document.getElementById('a7').onclick=function() { step55(); }
+	},1000);
 }
  
 function step55()
@@ -721,22 +747,19 @@ function step55()
 		 }
 		 else if(flag==2)
 		 {
-			 		document.getElementById('can5').innerHTML="Weight of pycnometer + water(W<sub>4</sub>)="+values1[lnt][3]+"gm";
-
-                document.getElementById('v5').innerHTML=+values1[lnt][3]+".00gm";
-
+			document.getElementById('can5').innerHTML="Weight of pycnometer + water(W<sub>4</sub>)="+values1[lnt][3]+"gm";
+            document.getElementById('v5').innerHTML=+values1[lnt][3]+".00gm";
          }
-
 		document.getElementById('nextButton').style.visibility="visible";
-
-	
 }
 		
 
 function refresh1()
 {
-	document.getElementById('hand3').style.transformOrigin = "";
-	document.getElementById('hand3').style.animation = "";
+	document.getElementById('hand3r').style.transformOrigin = "";
+	document.getElementById('hand3r').style.animation = "";
+	document.getElementById('hand3b').style.transformOrigin = "";
+	document.getElementById('hand3b').style.animation = "";
 	document.getElementById('hand4').style.transformOrigin = "";
 	document.getElementById('hand4').style.animation = "";
 	document.getElementById('hand5').style.transformOrigin = "";

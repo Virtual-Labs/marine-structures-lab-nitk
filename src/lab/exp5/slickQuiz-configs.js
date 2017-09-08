@@ -29,14 +29,14 @@ var quizJSON = {
          { // Question 2 - Multiple Choice, Multiple True Answers, Select Any
             "q": "Fineness modulus is  ",
             "a": [
-                {"option": "Sum of cumulative % weight passed /100", "correct": false},
-                {"option": "Sum of cumulative % weight retained /100", "correct": true},
+                {"option": "Sum of cumulative % weight passed /100",  "correct": false},
+                {"option": "Sum of cumulative % weight retained /100",  "correct": true},
 				{"option": "Sum of cumulative weight retained  /100", "correct": false},
 				{"option": "Sum of cumulative weight passed  /100", "correct": false} // no comma here
             ],
            
             "correct": "<p><span>Right answer</span> </p>",
-            "incorrect": "<p><span>wrong</span> It's wrong,<br>Ans:Sum of cumulative % weight retained /100" // no comma here
+            "incorrect": "<p><span>wrong</span> It's wrong,<br>Ans: Sum of cumulative % weight retained /100" // no comma here
         },
         { // Question 3 - Multiple Choice, Multiple True Answers, Select All
             "q": "Effective size of the aggregate is the",
@@ -47,7 +47,7 @@ var quizJSON = {
                 {"option": "All the above ",  "correct": false} // no comma here
             ],
              "correct": "<p><span>Right answer</span></p>",
-            "incorrect": "<p><span>wrong</span> It's wrong,<br>Ans:maximum particle size of the smallest 10% of the aggregate</p>" // no comma here
+            "incorrect": "<p><span>wrong</span> It's wrong,<br>Ans: maximum particle size of the smallest 10% of the aggregate</p>" // no comma here
         },
 		{ // Question 4 - Multiple Choice, Multiple True Answers, Select Any
             "q": "Larger size aggregates lead to ______ strength in concrete.",
@@ -57,7 +57,7 @@ var quizJSON = {
 				{"option": "No variation",	 "correct": false} // no comma here
             ],
             "correct": "<p><span>Right answer</span> </p>",
-            "incorrect": "<p><span>wrong</span> It's wrong,</br> Ans:Lower</p>" // no comma here
+            "incorrect": "<p><span>wrong</span> It's wrong,</br> Ans: Lower</p>" // no comma here
         }
         
       // no comma here

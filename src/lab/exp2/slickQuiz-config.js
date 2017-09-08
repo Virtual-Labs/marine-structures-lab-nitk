@@ -31,19 +31,16 @@ var quizJSON = {
             "a": [
                 {"option": "Change in mineral property",	 "correct": false},
 				{"option": "Change in physical property",	 "correct": false},
-				{"option": "Both a) and b)",	 "correct": true},				
-                {"option": "Only a)",  "correct": false} // no comma here
+				{"option": "Both a and b",	 "correct": true},				
+                {"option": "Only a",  "correct": false} // no comma here
             ],
             "correct": "<p><span>Right answer</span> </p>",
-            "incorrect": "<p><span>wrong</span> It's wrong,</br> Ans: Both a) and b)</p>" // no comma here
+            "incorrect": "<p><span>wrong</span> It's wrong,</br> Ans: Both a and b</p>" // no comma here
         },
         
 		
-		
-		
-		
 		{ // Question 3 - Multiple Choice, Multiple True Answers, Select Any
-              "q": "Match the correct size of the aggregates<br><img src=\"../images/table.PNG\"\height=250 width=350/>",
+              "q": "Match the correct size of the aggregates<br><img src=\"../images/table.png\"\height=250 width=350/>",
             "a": [
                 { "option": "a-1,b-2,c-3,d-4,e-5", "correct": false },
                 { "option": "a-4,b-3,c-5,d-1,e-2", "correct": true },
@@ -52,7 +49,7 @@ var quizJSON = {
             ],
 
                 "correct": "<p><span>Right answer</span> Ans:a-4,b-3,c-5,d-1,e-2</p>",
-                "incorrect": "<p><span>wrong</span> It's wrong,Ans:a-4,b-3,c-5,d-1,e-2</p>" // no comma here
+                "incorrect": "<p><span>wrong</span> It's wrong,Ans: a-4,b-3,c-5,d-1,e-2</p>" // no comma here
         },
 		
 		

@@ -24,7 +24,7 @@ var quizJSON = {
                 {"option": "%Cumulative Retained *100%",     "correct": false} // no comma here
             ],
             "correct": "<p><span>Right answer</span></p>",
-            "incorrect": "<p><span>wrong</span> It's wrong,</br> Ans:100% - %Cumulative Retained.</p>" // no comma here
+            "incorrect": "<p><span>wrong</span> It's wrong,</br> Ans: 100% - %Cumulative Retained.</p>" // no comma here
         },
         { // Question 2 - Multiple Choice, Multiple True Answers, Select Any
             "q": "The Grading curve is a curve having",
@@ -35,7 +35,7 @@ var quizJSON = {
                 {"option": "Sieve size on X-axis and cumulative % finer retained on Y-axis",  "correct": false} // no comma here
             ],
             "correct": "<p><span>Right answer</span> </p>",
-            "incorrect": "<p><span>wrong</span> It's wrong,</br> Ans:Sieve size on X-axis and % finer passing on Y-axis.</p>" // no comma here
+            "incorrect": "<p><span>wrong</span> It's wrong,</br> Ans: Sieve size on X-axis and % finer passing on Y-axis.</p>" // no comma here
         },
         
 		
@@ -46,7 +46,7 @@ var quizJSON = {
 				{"option": "True",	 "correct": true}//no comma here
             ],
             "correct": "<p><span>Right answer</span> </p>",
-            "incorrect": "<p><span>wrong</span> It's wrong,</br> Ans:True.</p>" // no comma here
+            "incorrect": "<p><span>wrong</span> It's wrong,</br> Ans: True.</p>" // no comma here
         },
 		 { // Question 4 - Multiple Choice, Multiple True Answers, Select Any
             "q": "Sieve residue is the",
@@ -57,7 +57,7 @@ var quizJSON = {
                 {"option": "None of the above", 	 "correct": false} // no comma here
             ],
             "correct": "<p><span>Right answer</span> </p>",
-            "incorrect": "<p><span>wrong</span> It's wrong,</br> Ans:Material retained on larger sieve</p>" // no comma here
+            "incorrect": "<p><span>wrong</span> It's wrong,</br> Ans: Material retained on larger sieve.</p>" // no comma here
         },
 		
 		{ // Question 5 - Multiple Choice, Multiple True Answers, Select Any
@@ -69,7 +69,7 @@ var quizJSON = {
                 {"option": "None of the above", 	 "correct": false} // no comma here
             ],
             "correct": "<p><span>Right answer</span> </p>",
-            "incorrect": "<p><span>wrong</span> It's wrong,</br> Ans:Coarser is the aggregate</p>" // no comma here
+            "incorrect": "<p><span>wrong</span> It's wrong,</br> Ans: Coarser is the aggregate</p>" // no comma here
         }
 		
    // no comma here

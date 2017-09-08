@@ -10,7 +10,6 @@ var n=0;
 
 function navNext()
 {
-
      for (temp = 0; temp <= 5 ; temp++) 
      { 
          document.getElementById ('canvas'+temp).style.visibility="hidden";
@@ -79,9 +78,7 @@ function myStopFunction()
 
 function magic()
 {
-	
-	
-	
+
 	if (simsubscreennum==1)
 	{  
         // refresh();
@@ -651,11 +648,11 @@ function step211()
 					 document.getElementById('12s').style.visibility="hidden";
 					 document.getElementById('12').style.visibility="visible";
 
-		 },4000);
+		 },5500);
 		 
 		 setTimeout(function(){
          document.getElementById('nextButton').style.visibility="visible";
-		 },4000);
+		 },5600);
     }
 	
 	

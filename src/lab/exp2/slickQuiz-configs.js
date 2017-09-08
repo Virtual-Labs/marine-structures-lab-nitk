@@ -24,17 +24,17 @@ var quizJSON = {
 				{"option": "None of the above",      "correct": false}   
 			],
 			"correct": "<p><span>Right answer</span></p>",
-			"incorrect": "<p><span>wrong</span> It's wrong,<br>Ans:Low specific gravity</p>" // no comma here
+			"incorrect": "<p><span>wrong</span> It's wrong,<br>Ans: Low specific gravity</p>" // no comma here
         },
          { // Question 2 - Multiple Choice, Multiple True Answers, Select Any
             "q": "According to the IS Code, Zone IV aggregate is finer than Zone I aggregate.",
             "a": [
                 {"option": "Yes",               "correct": true},
-				{"option": "No", "correct": false} // no comma here
+				{"option": "No",  "correct": false} // no comma here
             ],
            
             "correct": "<p><span>Right answer</span> </p>",
-            "incorrect": "<p><span>wrong</span> It's wrong,<br>Ans:Yes</p>" // no comma here
+            "incorrect": "<p><span>wrong</span> It's wrong,<br>Ans: Yes</p>" // no comma here
         },
         { // Question 3 - Multiple Choice, Multiple True Answers, Select All
             "q": "The purpose of using fine aggregate in concrete is to ",
@@ -45,7 +45,7 @@ var quizJSON = {
                 {"option": "Provide strength",  "correct": false} // no comma here
             ],
              "correct": "<p><span>Right answer</span></p>",
-            "incorrect": "<p><span>wrong</span> It's wrong,<br>Ans:Both the above </p>" // no comma here
+            "incorrect": "<p><span>wrong</span> It's wrong,<br>Ans: Both the above </p>" // no comma here
         }
         
       // no comma here

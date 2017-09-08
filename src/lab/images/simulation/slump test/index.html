@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+
+<title>SOLVE</title>
+<link rel="stylesheet" href="st.css" />
+<!-- <link rel="stylesheet" type="text/css" href="csshake.min.css"> -->
+<link rel="stylesheet" type="text/css" href="http://csshake.surge.sh/csshake.min.css">
+<link rel="stylesheet" type="text/css" href="http://csshake.surge.sh/csshake-vertical.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> 
+<script type="text/javascript" src= "jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src= "st.js"></script>
+<script type="text/javascript" src= "jquery-2.1.4.js"></script>
+<script type="text/javascript" src= "ej.web.all.js"></script>
+<script type="text/javascript" src="/assets/script/canvasjs.min.js"></script>
+
+
+
+<script>
+var values=[2700,4400,7500];
+var values1=[28,19,11,6];
+var simsubscreennum=0;
+var temp=0;
+var lnt=0;
+</script>
+</head>
+
+<body style="margin:0">
+<!--Simulation Screen start		-->
+<div id="simscreen">
+
+<!--Title of Simulation		-->
+<div id="title"><h3>Slump Test</h3></div>
+
+<!--SubScreen Home	-->	
+<div class="simsubscreen" id="canvas0">
+<h4 class="incanvas" style="font-family:verdana;" >Objective</h4>
+<p class="incanvas" style="font-family:verdana; font-size:14px;">To find the slump of mix design M35 concrete.<br><br></p>
+<h4 class="incanvas" style="font-family:verdana;">Apparatus used:</h4>
+<p class="incanvas" style="font-family:verdana; font-size:14px;">Slump cone, tamping rod, trowel, measuring jar, weighing balance etc..</p>
+<img id="" style="position: absolute; left: 454px; top: 273px;" src="images/ewm.png"/>
+<img id="" style="position: absolute; left: 0.5px; top: 168px;" src="images/1.13.png"/>
+
+</div>
+
+
+<!--Step1	-->	
+<div class="simsubscreen" id="canvas1" style="visibility:hidden">
+<strong id="titlestep" class="incanvas">STEP </strong>
+<span class="circlebg" id="stepnumber">&nbsp;1&nbsp;</span>
+<p id="pumptext" class="steptext" style="font-family:verdana; font-size:14px;">&nbsp;Find the volume of the cone from its dimensions ie, by measuring its height and diameter.</p>
+<img id="can1-1" style="position: absolute; left: 410px; top: 285px;" src="images/slumpcone.png"/>
+<img id="can1-3" style="position: absolute; left: 450px; top:90px; visibility:hidden;" src="images/f2.png"/>
+<img id="can1-4" style="position: absolute; left: 514px; top:90px; visibility:hidden;" src="images/f3.png"/>
+<img id="can1-5" style="position: absolute; left: 450px; top:280px; visibility:hidden;" src="images/f4.png"/>
+<img id="can1-2" style="position: absolute; left: 450px; top:285px; visibility:hidden;" src="images/frustum1.png"/>
+<img id="can1-6" style="position: absolute; left: 0px; top:100px; visibility:hidden;" src="images/volume2.png"/>
+<img id="can1-7" style="position: absolute; left: 610px; top:90px; visibility:hidden;" src="images/H.png"/>
+<img id="can1-8" style="position: absolute; left: 565px; top:90px; visibility:hidden;" src="images/HS.png"/>
+<img id="can1-9" style="position: absolute; left: 517.5px; top:289.50px; visibility:hidden;" src="images/dottedline.png"/>
+<img id="can1-10" style="position: absolute; left: 450px; top:490.25px; visibility:hidden;" src="images/R.png"/>
+<img id="can1-11" style="position: absolute; left: 482px; top:288.50px; visibility:hidden;" src="images/RS.png"/>
+<img id="can1-12" style="position: absolute; left: 0px; top:370px; visibility:hidden;" src="images/volume3.png"/>
+
+<p id="v1-1" style="position:absolute; left: 5px; top:150px; visibility:hidden; font-family:verdana; font-size:16px;">H = 60cm</p>
+<p id="v1-2" style="position:absolute; left: 5px; top:200px; visibility:hidden; font-family:verdana; font-size:16px;">R = 10cm</p>
+<p id="v1-3" style="position:absolute; left: 5px; top:250px; visibility:hidden; font-family:verdana; font-size:16px;">h = 30cm</p>
+<p id="v1-4" style="position:absolute; left: 5px; top:300px; visibility:hidden; font-family:verdana; font-size:16px;">r = 5cm</p>
+<p id="v1-5" style="position:absolute; left: 5px; top:420px; visibility:hidden; font-family:verdana; font-size:16px;">Volume of slump cone = 5.498×10<sup>-3</sup>m<sup
+>3</sup></p>
+
+</div>
+
+
+<!--Step2-->	
+<div class="simsubscreen" id="canvas2" style="visibility:hidden"> 
+<strong id="titlestep" class="incanvas">STEP &nbsp;</strong> 
+<span class="circlebg" id="stepnumber">&nbsp;2&nbsp;</span>
+<p id="pumptext-2" class="steptext" style="font-family:verdana; font-size:14px; ">&nbsp;Measure required quantity of water, coarse, fine aggregate and cement based on mix design.</p> 
+<p id="v2-11" style="position:absolute; left: 0px; top:50px;  font-family:verdana; font-size:14px; visibility:hidden;">Mix proportion is = 1 : 2.7 : 4.2</p>
+<p id="v2-12" style="position:absolute; left: 0px; top:100px;  font-family:verdana; font-size:14px; visibility:hidden;">Water Cement ratio assumed is = 0.43</p>
+<img id="v2-13" style="position: absolute; left: 0px; top: 150px; visibility:hidden;" src="images/cement_cont.png"/>
+<p id="v2-14" style="position:absolute; left: 0px; top:195px;  font-family:verdana; font-size:14px; visibility:hidden;">Cement content = 1.6Kg</p>
+<img id="v2-15" style="position: absolute; left: 0px; top: 245px; visibility:hidden;" src="images/fine.png"/>
+<p id="v2-16" style="position:absolute; left: 0px; top:290px;  font-family:verdana; font-size:14px; visibility:hidden;">Quantity of fine aggregate  = 4.3Kg</p>
+<img id="v2-17" style="position: absolute; left: 0px; top: 340px; visibility:hidden;" src="images/coarse.png"/>
+<p id="v2-18" style="position:absolute; left: 0px; top:385px;  font-family:verdana; font-size:14px; visibility:hidden;">Quantity of coarse aggregate = 6.7Kg</p>
+<p id="v2-19" style="position:absolute; left: 0px; top:435px;  font-family:verdana; font-size:14px; visibility:hidden;">Water content = 0.43 x Cement content</p>
+<p id="v2-20" style="position:absolute; left: 0px; top:485px;  font-family:verdana; font-size:14px; visibility:hidden;">Water content = 0.43 x 1.6 = 0.67Liter</p>
+
+<img id="ewm" style="position: absolute; left: 230px; top: 255px; visibility:hidden;" src="images/ewm1.png"/>
+<img id="mw" style="position: absolute; left: 310px; top: 342px; visibility:hidden;" src="images/mw.png"/>
+<img id="hp2-1" style="position: absolute; left:2px; top: 90px; visibility:hidden;" src="images/hp.png"/>
+
+<img id="swc2"  style="position: absolute; visibility: hidden; left: 468px; top: 120px;" src="images/ssc.png"/> 
+<img id="wc" style="position: absolute; left: 287px; top: 215px; visibility:hidden" src="images/sc.png"/>
+<img id="fa2"  style="position: absolute; visibility: hidden; left: 419.25px; top: 105px;" src="images/fine_agg1.png"/> 
+<img id="fa" style="position: absolute; left: 275px; top: 211.75px; visibility:hidden" src="images/fine_agg.png"/>
+<img id="ca2"  style="position: absolute; visibility: hidden; left: 432.5px; top: 122px;" src="images/ca22.png"/> 
+<img id="ca" style="position: absolute; left: 280px; top: 219px; visibility:hidden" src="images/ca22.png"/> 
+
+<img id="p2" style="position: absolute; left: 251px; top: 212.25px; cursor:move; visibility:hidden" src="images/plate.png"/>
+
+<img id="wc2-1" style="position: absolute; left: 553.75px; top: 397px; visibility:hidden;" src="images/sc.png"/>
+<img id="p2-1" style="position: absolute; left: 519px; top: 392.75px; cursor:move;visibility:hidden;" src="images/plate.png"/>
+
+<img id="wc2-2" style="position: absolute; left: 541px; top: 282px; visibility:hidden;" src="images/fine_agg.png"/>
+<img id="p2-2" style="position: absolute; left: 519px; top: 283.75px; cursor:move; visibility:hidden;" src="images/plate.png"/>
+
+<img id="wc2-3" style="position: absolute; left: 552px; top: 162px; visibility:hidden;" src="images/ca22.png"/>
+<img id="p2-3" style="position: absolute; left: 519px; top: 153.75px; cursor:move; visibility:hidden;" src="images/plate.png"/>
+
+<img id="pwc" style="position: absolute; left:350px; top:185px; visibility:hidden;" src="images/pc.png"/>
+<img id="pfa" style="position: absolute; left:340px; top:170px; visibility:hidden;" src="images/bs1.png"/>
+<img id="pca" style="position: absolute; left:340px; top:170px; visibility:hidden;" src="images/pca.png"/>
+
+<img id="hand"  style="position: absolute; left:420px; top:65px; visibility: hidden;" src="images/pour.png"/> 
+
+<img id="water" style="position: absolute; left:170px; top: 180px; visibility:hidden;" src="images/water.png"/>
+<img id="cylwat" style="position: absolute; left: 140px; top: 350px; visibility:hidden;" src="images/cylwat.png"/>
+<img id="msrdev" style="position: absolute; left: 110px; top: 185px; visibility:hidden;" src="images/msrdev.png"/>
+<img id="hn" style="position: absolute; left:198px; top: 85px; visibility:hidden;" src="images/hn.png"/>
+<img id="hn2" style="position: absolute; left:190px; top: 85px; visibility:hidden;" src="images/hn2.png"/>
+
+<img id="on2-1" style="position: absolute; left:300px; top: 380px; cursor:pointer; visibility:hidden;" src="images/on.png"/>
+<img id="off2-1" style="position: absolute; left: 330px; top: 380px; cursor:pointer; visibility:hidden;" src="images/off.png"/>
+<img id="zero2-1" style="position: absolute; left: 360px; top: 380px; visibility:hidden;" src="images/zero.png"/>
+<img id="tare2-1" style="position: absolute; left: 390px; top: 380px; cursor:pointer; visibility:hidden;" src="images/tare2.png"/>
+
+<img id="on2-2" style="position: absolute; left:295px; top: 380px; visibility:hidden" src="images/onblue.png"/>
+<img id="on2-3" style="position: absolute; left:300px; top: 380px; visibility:hidden; cursor:pointer;" src="images/on.png"/>
+<img id="tare2-3" style="position: absolute; left: 390px; top: 380px; visibility:hidden; cursor:pointer;" src="images/tare2.png"/>
+<img id="tare2-2" style="position: absolute; left: 385px; top: 380px; visibility:hidden; cursor:pointer;" src="images/tare3.png"/>
+<p id="v2-1" style="position:absolute; left: 338px; top:334px; visibility:hidden; font-family:verdana; font-size:14px;">00.00   g</p>
+<p id="v2-2" style="position:absolute; left: 332px; top:334px; visibility:hidden; font-family:verdana; font-size:14px;">  g</p>
+<p id="v2-3" style="position:absolute; left: 0px; top: 430px; visibility:hidden; font-family:verdana; font-size:16px;">Quantity of cement = 1.6Kg</p>
+<p id="v2-4" style="position:absolute; left: 0px; top: 430px; visibility:hidden; font-family:verdana; font-size:16px;">Quantity of fine aggregate = 4.3Kg</p>
+<p id="v2-5" style="position:absolute; left: 0px; top: 430px; visibility:hidden; font-family:verdana; font-size:16px;">Quantity of coarse aggregate = 6.7Kg</p>
+<p id="v2-6" style="position:absolute; left: 35px; top: 450px; visibility:hidden; font-family:verdana; font-size:16px;">Volume of water = 0.67Liter</p>
+
+<p id="v2-7" style="position:absolute; left: 575px; top: 462px; visibility:hidden; font-family:verdana; font-size:14px;">1.6Kg Cement</p>
+<p id="v2-8" style="position:absolute; left: 550px; top: 340px; visibility:hidden; font-family:verdana; font-size:14px;">4.3Kg Fine aggregate</p>
+<p id="v2-9" style="position:absolute; left: 550px; top: 222px; visibility:hidden; font-family:verdana; font-size:14px;">6.7Kg Coarse aggregate</p>
+
+</div>
+
+<!--Step3-->	
+<div class="simsubscreen" id="canvas3" style="visibility:hidden">
+<strong class="incanvas">STEP &nbsp;</strong><span class="circlebg">&nbsp;3&nbsp;</span>
+<p class="steptext" style="font-family:verdana; font-size:14px;">&nbsp; Dry mix the materials properly.</p>
+
+<img id="mix1" style="position: absolute; left:180px; top:270px; visibility:hidden;" src="images/ca22.png"/>
+<img id="trowel1" style="position:absolute; left:220px; top:135px; visibility:hidden; cursor:pointer;" src="images/trowel1.png"/>
+<img id="mix2" style="position: absolute; left:157px; top:267px; visibility:hidden;" src="images/fine_agg.png"/>
+<img id="mix3" style="position: absolute; left:152px; top:270px; visibility:hidden;" src="images/sc.png"/>
+<img id="mix4" style="position: absolute; left:100px; top:250px; visibility:hidden;" src="images/dry_mix.png"/>
+
+<!-- <img id="cem_tub" style="position: absolute; left:50px; top:200px; visibility:hidden;" src="images/plate_fill.png"/> -->
+<img id="cem_tub" style="position: absolute; left:100px; top:250px; visibility:hidden;" src="images/plate_fill.png"/>
+<img id="trowel2" style="position:absolute; left:220px; top:180px; visibility:hidden;" src="images/trowel2.png"/>
+
+<img id="wc3-3" style="position: absolute; left: 554px; top: 398px; " src="images/sc.png"/>
+<img id="p3-3" style="position: absolute; left: 519px; top: 392.75px; cursor:move;" src="images/plate.png"/>
+<img id="p3-33" style="position: absolute; left: 300px; top: 150px; cursor:move; visibility:hidden;" src="images/cem_pan.png"/>
+
+<img id="wc3-2" style="position: absolute; left: 540px; top: 285px; " src="images/fine_agg.png"/>
+<img id="p3-2" style="position: absolute; left: 519px; top: 283.75px; cursor:move; " src="images/plate.png"/>
+<img id="p3-22" style="position: absolute; left: 300px; top: 150px; cursor:move; visibility:hidden;" src="images/fa_pan.png"/>
+
+<img id="wc3-1" style="position: absolute; left: 550px; top: 162px; " src="images/ca22.png"/>
+<img id="p3-1" style="position: absolute; left: 519px; top: 153.75px; cursor:move; " src="images/plate.png"/>
+<img id="p3-11" style="position: absolute; left: 300px; top: 150px; cursor:move; visibility:hidden;" src="images/ca_pan.png"/>
+</div>
+
+ 
+ 
+<!--Step4	-->	
+<div class="simsubscreen" id="canvas4" style="visibility:hidden;">
+<strong class="incanvas">STEP &nbsp;</strong><span class="circlebg">&nbsp;4&nbsp;</span>
+<p class="steptext" style="font-family:verdana; font-size:14px;">&nbsp; Add measured quantity of water, mix it thoroughly and uniformly.</p>
+<img id="water4-2" style="position: absolute; left:135px; top:272px; visibility:hidden;" src="images/coverblue.png"/>
+<img id="trowel4-1" style="position:absolute; left:220px; top:135px; visibility:hidden; cursor:pointer;" src="images/trowel1.png"/>
+<img id="trowel4-2" style="position:absolute; left:220px; top:180px; visibility:hidden;" src="images/trowel2.png"/>
+<img id="mix6" style="position: absolute; left:100px; top:250px; visibility:hidden;" src="images/concrete.png"/>
+
+<img id="cem_tub4" style="position: absolute; left:100px; top:250px; " src="images/dry_mix.png"/>
+<img id="cyl4-1" style="position:absolute; left:430px; top:225px; visibility:hidden;" src="images/84.png"/>
+<img id="cyl4-2" style="position:absolute; left:390px; top:80px; visibility:hidden;" src="images/84-1.png"/>
+<img id="water4" style="position:absolute; left:220px; top:220px; visibility:hidden;" src="images/fp.png"/>
+
+</div>
+
+
+<!--Step5	-->	
+<div class="simsubscreen" id="canvas5" style="visibility:hidden">
+<strong class="incanvas" >STEP &nbsp;</strong><span class="circlebg" >&nbsp;5&nbsp;</span>
+<p class="steptext"  style="font-family:verdana; font-size:14px;" >&nbsp;Place the cleaned slump cone on a horizontal slump base.</p>
+<img id="can5-1" style="position:absolute; left:200px; top:320px; " src="images/base.png"/>
+<img id="can5-2" style="position:absolute; left:0px; top:170px; cursor:move; " src="images/slumpcone.png"/>
+<img id="can5-3" style="position:absolute; left:228px; top:200px; visibility:hidden;" src="images/slumpcone.png"/>
+<img id="can5-4" style="position:absolute; left:250px; top:300px; visibility:hidden;" src="images/screw.png"/>
+<img id="can5-5" style="position:absolute; left:430px; top:300px; visibility:hidden;" src="images/screw.png"/>
+<img id="can5-6" style="position:absolute; left:243.75px; top:384.5px; visibility:hidden;" src="images/screw.png"/>
+<img id="can5-7" style="position:absolute; left:433.75px; top:371.75px; visibility:hidden;" src="images/screw.png"/>
+
+</div>
+
+<!--Step6	-->	
+<div class="simsubscreen" id="canvas6" style="visibility:hidden">
+<strong class="incanvas" >STEP &nbsp;</strong><span class="circlebg" >&nbsp;6&nbsp;</span>
+<p class="steptext" style="font-family:verdana; font-size:14px;" >&nbsp;Fill the mould in four layers, each layer is tamped 25 times by a tamping rod.</p>
+<img id="can6-9" style="position:absolute; left:440px; top:60px;  visibility:hidden;" src="images/tamping_rod1.png"/>
+<img id="can6-10" style="position:absolute; left:405px; top:60px;  visibility:hidden;" src="images/tamping_rod2.png"/>
+<img id="can6-7" style="position:absolute; left:440px; top:183.5px;  visibility:hidden;" src="images/con_crete.png"/>
+<img id="can6-1" style="position:absolute; left:338px; top:192px; " src="images/setup.png"/>
+
+
+<img id="can6-21" style="position: absolute; left:50px; top:240px; visibility:hidden;" src="images/concrete1.png"/> 
+<img id="can6-22" style="position: absolute; left:50px; top:240px; visibility:hidden;" src="images/concrete11.png"/>
+<img id="can6-23" style="position: absolute; left:50px; top:240px; visibility:hidden;" src="images/concrete21.png"/>
+<img id="can6-24" style="position: absolute; left:50px; top:240px; visibility:hidden;" src="images/concrete31.png"/> 
+<img id="can6-25" style="position: absolute; left:50px; top:240px; visibility:hidden;" src="images/concrete4.png"/> 
+<img id="can6-26" style="position: absolute; left:50px; top:240px; visibility:hidden;" src="images/plate_fill.png"/> 
+
+<img id="can6-3" style="position: absolute; left:50px; top:240px; " src="images/concrete.png"/>
+<img id="can6-4" style="position:absolute; left:20px; top:100px;  visibility:hidden; " src="images/trowel.png"/>
+<img id="can6-5" style="position:absolute; left:30px; top:229px;  visibility:hidden;" src="images/trowel3.png"/>
+<img id="can6-6" style="position:absolute; left:312px; top:118px;  visibility:hidden;" src="images/trowel3.png"/>
+<img id="can6-11" style="position:absolute; left:428.5px; top:187px;  visibility:hidden;" src="images/con_crete1.png"/>
+<img id="can6-8" style="position:absolute; left:30px; top:229px;  visibility:hidden;" src="images/trowel3.png"/>
+</div>
+
+
+<!--Step7-->	
+<div class="simsubscreen" id="canvas7" style="visibility:hidden">
+<strong class="incanvas" >STEP &nbsp;</strong><span class="circlebg" >&nbsp;7&nbsp;</span>
+<p class="steptext" style="font-family:verdana; font-size:14px;" >&nbsp;Remove extra concrete with the trowel and tamping rod.</p>
+<img id="can7-1" style="position:absolute; left:338px; top:192px; " src="images/setup.png"/>
+<img id="can7-2" style="position:absolute; left:428.5px; top:187px; " src="images/con_crete1.png"/>
+<img id="can7-3" style="position:absolute; left:290px; top:140px;  visibility:hidden; " src="images/trowel.png"/>
+<img id="can7-4" style="position:absolute; left:304px; top:110px;  visibility:hidden; " src="images/tamping_rod3.png"/>
+<img id="can7-5" style="position:absolute; left:304px; top:132px; visibility:hidden;" src="images/tamping_rod3.png"/>
+<img id="can7-6" style="position:absolute; left:338px; top:190px; visibility:hidden" src="images/setup2.png"/>
+</div>
+
+<!--Step8-->	
+<div class="simsubscreen" id="canvas8" style="visibility:hidden">
+<strong class="incanvas" >STEP &nbsp;</strong><span class="circlebg" >&nbsp;8&nbsp;</span>
+<p class="steptext" style="font-family:verdana; font-size:14px;" >&nbsp;Remove the mould from the concrete immediately by raising it slowly in vertical direction.</p>
+<img id="can8-1" style="position:absolute; left:200px; top:320px; " src="images/base.png"/>
+<img id="can8-8" style="position:absolute; left:284px; top:278px; visibility:hidden; " src="images/fin_slump.png"/>
+<img id="can8-2" style="position:absolute; left:228px; top:200px; " src="images/slumpcone.png"/>
+<img id="can8-3" style="position:absolute; left:243.75px; top:384.25px; " src="images/screw.png"/>
+<img id="can8-4" style="position:absolute; left:433.75px; top:371.75px; " src="images/screw.png"/>
+<img id="can8-5" style="position:absolute; left:228px; top:200px; visibility:hidden; " src="images/slumpconeH.png"/>
+<img id="can8-6" style="position:absolute; left:348px; top:160px; visibility:hidden;" src="images/slumpconeHD.png"/> 
+<img id="can8-7" style="position:absolute; left:348px; top:200px; visibility:hidden;" src="images/slumpconeD.png"/>
+</div>
+
+<!--Step9-->	
+<div class="simsubscreen" id="canvas9" style="visibility:hidden">
+<strong class="incanvas" >STEP &nbsp;</strong><span class="circlebg" >&nbsp;9&nbsp;</span>
+<p class="steptext" style="font-family:verdana; font-size:14px;" >&nbsp;Note down the slump by keeping slump cone mould as reference.</p>
+<img id="can9-1" style="position:absolute; left:200px; top:320px; " src="images/base.png"/>
+<img id="can9-2" style="position:absolute; left:348px; top:200px; " src="images/slumpconeD.png"/>
+<img id="can9-4" style="position:absolute; left:100px; top:60px; visibility:hidden;" src="images/tamping_rod4.png"/>
+<img id="can9-5" style="position:absolute; left:200px; top:205px; visibility:hidden;" src="images/tamping_rod5.png"/>
+<img id="can9-7" style="position:absolute; left:248px; top:182px; visibility:hidden" src="images/length.png"/>
+<img id="can9-6" style="position:absolute; left:280px; top:278px; " src="images/fin_slump.png"/>
+<img id="can9-8" style="position:absolute; left:50px; top:100px; visibility:hidden;" src="images/scale.png"/>
+<img id="can9-10" style="position:absolute; left:5px; top:154.5px; visibility:hidden;" src="images/12.png"/>
+<img id="can9-9" style="position:absolute; left:0px; top:150px; visibility:hidden;" src="images/hookgauge.png"/>
+
+</div>
+
+
+<!--Step10-->	
+<div class="simsubscreen" id="canvas10" style="visibility:hidden">
+<p class="steptext" style="font-family:verdana; font-size:14px;" >&nbsp;<h2>Observation</h2></p>
+<p id="v10-1" style="position:absolute; left: 0px; top: 100px; font-family:verdana; font-size:14px;">Volume of slump = 5.498x10<sup>-3</sup> m<sup>3</sup> </p>
+<p id="v10-1" style="position:absolute; left: 0px; top: 200px;  font-family:verdana; font-size:14px;">water cement ratio assumed is = 0.43</p>
+<p id="v10-1" style="position:absolute; left: 0px; top: 300px;  font-family:verdana; font-size:14px;">Mix proportion is = 1 : 2.7 : 4.2</p>
+<p id="v10-1" style="position:absolute; left: 350px; top: 100px;  font-family:verdana; font-size:14px;">Quantity of cement = 2.7Kg</p>
+<p id="v10-3" style="position:absolute; left: 350px; top: 200px;  font-family:verdana; font-size:14px;">Quantity of fine aggregate = 1.6Kg</p>
+<p id="v10-4" style="position:absolute; left: 350px; top: 300px;  font-family:verdana; font-size:14px;">Quantity of coarse aggregate = 6.7Kg</p>
+<p id="v10-5" style="position:absolute; left: 350px; top: 400px;  font-family:verdana; font-size:14px;">Volume of water = 0.67Liter</p>
+<p id="v10-6" style="position:absolute; left: 0px; top: 400px;  font-family:verdana; font-size:14px;">Slump value = 30 - 12 = 18cm</p>
+
+</div>
+
+<div id="">	
+<p id="trial" style="text-transform:uppercase; visibility:hidden; font-weight:bold; font-family:verdana; font-size:14px;"><strong>Trial = </strong></p>
+</div>
+
+
+<!--next  Arrow	-->	
+<div id="nav">
+	<img id="nextButton" onclick="navNext(); " src="Images/Next.png" />
+</div>
+
+
+<!--Blinking Arrow	-->	
+<img class ="" id="arrow1" style="visibility:hidden;" src="Images/arrow1.png"/>
+
+<div id="copyright"> &copy; 2016 SOLVE - The Virtual Lab @ NITK Surathkal, Department of Applied Mechanics & Hydraulics</div>
+
+
+
+</body>
+</html>

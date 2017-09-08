@@ -24,7 +24,7 @@ var quizJSON = {
 				{"option": "None of the above",      "correct": false}   
 			],
 			"correct": "<p><span>Right answer</span></p>",
-			"incorrect": "<p><span>wrong</span> It's wrong,<br>Ans: Size at 30% finer by weight</p>" // no comma here
+			"incorrect": "<p><span>wrong</span> It's wrong,<br>Ans: Size at 30% finer by weight.</p>" // no comma here
         },
          { // Question 2 - Multiple Choice, Multiple True Answers, Select Any
             "q": "Coefficient of curvature is",
@@ -36,7 +36,7 @@ var quizJSON = {
             ],
            
             "correct": "<p><span>Right answer</span> </p>",
-            "incorrect": "<p><span>wrong</span> It's wrong,<br>Ans:C<sub>u</sub>=D<sub>30</sub><sup>2</sup>/(D<sub>60</sub> * D<sub>10</sub>)</p>" // no comma here
+            "incorrect": "<p><span>wrong</span> It's wrong,<br>Ans: C<sub>u</sub>=D<sub>30</sub><sup>2</sup>/(D<sub>60</sub> * D<sub>10</sub>)</p>" // no comma here
         },
         { // Question 3 - Multiple Choice, Multiple True Answers, Select All
             "q": "The IS Standard for sieve analysis test on aggregate is",
@@ -47,7 +47,7 @@ var quizJSON = {
                 {"option": "IS 2386-I (1963)",  "correct": true} // no comma here
             ],
              "correct": "<p><span>Right answer</span></p>",
-            "incorrect": "<p><span>wrong</span> It's wrong,<br>Ans: Both of these </p>" // no comma here
+            "incorrect": "<p><span>wrong</span> It's wrong,<br>Ans: IS 2386-I (1963) </p>" // no comma here
         }
         
       // no comma here

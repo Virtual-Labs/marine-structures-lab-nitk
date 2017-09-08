@@ -1,0 +1,538 @@
+<!-- This file needs to be edited by the lab developer to suit the requirements of their lab in particular.-->
+<!-- Add class="default" to include any element as it is specified in default.html. Do not include class="default" to the elements that you want to edit -->
+<!DOCTYPE html>
+<html>
+<head>
+<title> Marine Structures Lab - SOLVE @ NITK Surathkal
+</title>
+
+<style>
+#algn span{
+display: flex;
+  align-items: center;
+  }
+</style>
+</head>
+
+<body>
+   <div id="experiment">
+        <!-- The Experiment Document Container-->
+        <!-- The lab Header contains the logo and the name of the lab,  usually displayed on the top of the page-->
+        <header class="default" id="experiment-header">
+            <div class="logo" id="experiment-header-logo">
+            <!-- Enclose the logo image of your lab or write it in text-->
+            <img src="../images/logo.jpg">
+			</div>
+
+            <div class="heading" id="experiment-header-heading">
+                <!-- Write the name of your lab and link it to the home page of your lab (h1 tag is preferred while writing your lab name)-->
+                <a href="../index.html">Marine Structures Lab</a>
+            </div>
+			
+			<!-- Add any additional element you want to add to the lab header, For example : Help (Enclosing them with suitable div is recommended)-->
+        </header>
+		
+<!-- The lab article is the main content area where all the experiment content sits-->
+
+        <article id="experiment-article">
+            <!-- The lab article has an header, optional navigational 
+			menu, number of sections, an optional sidebar and a closing 
+			footer-->
+
+            <div class="breadcrumb" id="experiment-article-breadcrumb"></div>
+
+            <header class="heading" id="experiment-article-heading">
+				Concrete Mix Design
+			</header>
+<!-- Navigation menu is useful to organize the view of multiple sections inside the article-->
+
+            <nav class="default" id="experiment-article-navigation">
+                <ul id="experiment-article-navigation-menu">
+                    <!-- The menu can be dynamically generated to contain 
+					the headings of your sections or instead write the 
+					menu items of your choice individually enclosedu in 
+					&lt;li&gt; tag as shown below-->
+                </ul>
+            </nav>
+<!-- All the sections of your lab or experiment can be enclosed together with a div element as shown below-->
+
+			
+            <div id="experiment-article-sections">
+			
+                <!-- First section of the article-->
+			<section id="experiment-article-section-1">
+                <div class="icon" id="experiment-article-section-1-icon">
+                <!-- Enclose the icon image of your lab. -->
+                <img src="../images/theory.jpg"></div>
+
+                <div class="heading" id="experiment-article-section-1-heading">
+					Theory
+                </div>
+
+            <div class="content" id="experiment-article-section-1-content">
+            <div class="divContent"  id="wrap">
+					
+					<!-- Theory Content-->
+					<p style="text-indent: 50px;">The process of selecting suitable ingredients of concrete and determining their relative amounts with the objective of producing a concrete of the required, strength, durability, and workability as economically as possible is termed the concrete mix design. The proportioning of ingredient of concrete is governed by the required performance of concrete in plastic state and hardened state.  The compressive strength of hardened concrete which is generally considered to be an index of its other properties depends upon many factors like quality and quantity of cement, water and aggregates, batching and mixing, placing, compaction and curing. The rich mixes may lead to high shrinkage and cracking in the structural concrete, and to evolution of high heat of hydration in mass concrete which may cause cracking, hence the aim of the mix design is to produce a lean mix as possible. </p></br>
+					
+					<p style="text-indent: 50px;">There are different types of mixes.</p></br>
+					
+					<p style="text-indent: 50px;"><h2>1.Nominal mix: </h2></p></br>
+					
+					<p style="text-indent: 50px;">In the past the specifications for concrete prescribed the proportions of cement, fine and coarse aggregates. These mixes of fixed cement-aggregate ratio which ensures adequate strength are termed nominal mixes.</p></br>
+					
+
+					<p style="text-indent: 50px;"><h2>2.Standard mix: </h2></p></br>
+					
+					<p style="text-indent: 50px;">The nominal mixes of fixed cement-aggregate ratio (by volume) vary widely in strength and may result in under- or over-rich mixes. For this reason, the minimum compressive strength has been included in many specifications. These mixes are termed standard mixes. </p></br>
+					
+					
+
+					<p style="text-indent: 50px;"><h2>3.Design mix: </h2></p></br>
+					
+					
+					<p style="text-indent: 50px;">In these mixes the performance of the concrete is specified by the designer but the mix proportions are determined by the producer of concrete, except that the minimum cement content can be laid down. This is most rational approach to the selection of mix proportions with specific materials in mind possessing more or less unique characteristics. </p></br>
+					
+					<p style="text-indent: 50px;">1. According to IS: 456–2000 and IS: 1343–‘80, the characteristic strength is defined as that value 50 below which not more than 5 per cent results are expected to fall, in which case the Target mean strength for mix design</p></br>
+					
+					<p style="text-indent: 50px;">Target mean strength:<center><img src="../images/tms.png" style =" width:150px; height:36px;"></img></center></p>
+					
+					<p style="text-indent: 50px;">Where,  fck= Characteristic compressive strength at 28 days and S= Standard deviation</p></br>
+					
+					<center><img src="../images/mixtable1.png" style =" width:295px; height:252px;"></img></center><br/>
+					
+					
+					<p style="text-indent: 50px;">2. Selection of Water / Content Ratio consider from the specified table (Table-5) of IS: 456 for desired exposure condition as preliminary w/c ratio that has to be further checked for limiting value ensuring durability.  </p></br>
+					
+					<center><img src="../images/mixtable2.png" style =" width:606px; height:375px;"></img></center><br/>
+				
+					<p style="text-indent: 50px;">3. Calculation of Water Content. IS: 10262-2009 allows use of water reducers/ super plasticizers and also specifies the alteration in water content accordingly. Further water adjustment was specified in terms slump variation (+3% for every 25mm slump over 50mm).</p></br>
+					
+					<center><img src="../images/mixtable3.png" style =" width:300px; height:258px;"></img></center><br/>
+
+					<p style="text-indent: 50px;">4. Calculation of Cement Content. The cement content per unit volume of concrete may be calculated from free water-cement ratio and the quantity of water per unit volume of concrete<br/> 
+                    Cement by mass = Water content/Water cement ratio<br/>
+                    The cement content so calculated shall be checked against the minimum cement content for the requirement of durability and the greater of the two values to be adopted.<br/><br/>
+					
+					
+					
+					<p style="text-indent: 50px;">5. Calculation of Coarse Aggregate Proportion: For the desired workability, the quantity of mixing water per unit volume of concrete and the ratio of coarse aggregate to total aggregate by absolute volume are to be estimated from Tables 3<br/>
+					From Table 3, volume of coarse aggregate corresponding to 20 mm size aggregate and fine aggregate (Zone I) for water-cement ratio of 0.50 =0.60,<br/>
+					For every ±0.05 change in w/c, the coarse aggregate proportion is to be changed by 0.01. If the w/c is less than 0.5 (standard value), volume of coarse aggregate is required to be increased to reduce the fine aggregate content. If the w/c is more than 0.5, volume of coarse aggregate is to be reduced to increase the fine aggregate content. If coarse aggregate is not angular, volume of coarse aggregate may be required to be increased suitably, based on experience.</p></br> 
+					
+					
+					<p style="text-indent: 50px;">6. Calculation of aggregate content. Aggregate content can be determined from the following equations<br/>
+					<img src="../images/agg1.png" style =" width:180px; height:60px;"></img><br/>
+					<img src="../images/agg2.png" style =" width:151px; height:61px;"></img><br/>
+					
+					<p style="text-indent: 50px;">Where,<br/>
+					V= Absolute volume of fresh concrete, which is equal to gross volume (m3) – volume of entrapped air.<br/>
+					W= Mass of water (kg) per m3 of concrete.<br/>
+					C= Mass of cement(kg) per m3 of concrete<br/>
+					Sc=specific gravity of cement<br/>
+					P= Ratio of coarse aggregate to total aggregate by total volume<br/>
+					fa,Ca=  Total mass of fine and coarse aggregate per m3 of concrete respectively<br/>
+					Sfa , Sca Specific gravities of saturated, surface dry fine aggregate and coarse aggregates</p></br>
+					
+				
+					
+					<p style="text-indent: 50px;">Relevant IS Codes: <br/>
+					1.	IS:456-2000: Plain and Reinforced Concrete Code of Practice, 4th revision,2000.<br/>
+					2.	IS:10262-2009: Concrete Mix Proportioning Guidelines, first revision,2009.</p></br>
+								
+			</div>  <!-- Theory Content End-->
+
+			</div>
+
+		</section>
+	
+	
+ <section id="experiment-article-section-2">
+                    <div class="icon" id="experiment-article-section-2-icon">
+                    <!-- Enclose the icon image of your lab.-->
+                    <img src="../images/procedure.jpg" style="padding-left: 20px;"></div>
+
+                    <div class="heading" id=
+                    "experiment-article-section-2-heading">
+                        Procedure
+                    </div>
+
+                    <div class="content" id=
+                    "experiment-article-section-2-content">
+                        <div class="divContent"  id="wrap">
+						
+                       <h3><b>Objective: </b></h3>
+
+		<p>To determine the mix proportion for selected grade of concrete.</p>
+		<h3><b>Steps:</b></h3>
+		<ol>
+			<li>Select the type of concrete for mix design then click arrow mark in the bottom right corner to proceed.</br>
+			<p><center><img src="../images/mix1.png"style = "width:740px; height:600px;"></img></center></p></br>
+			</li>
+			
+			<li>Select the stipulations for mix design, and then click NEXT button. <br>
+			<p><center><img src="../images/mix2.JPG"style = "width:740px; height:600px;"></img></center></p></br>
+			</li>
+			
+			<li>Here to calculate the target strength of the mix select standard deviation from the table and enter in a given box.</br>
+			<p><center><img src="../images/mix3.JPG"style = "width:740px; height:600px;"></img></center></p></br>
+			</li>
+			
+			<li>Then in this step enter the suitable water cement ratio then click NEXT.</br>
+			<p><center><img src="../images/mix4.JPG"style = "width:740px; height:600px;"></img></center></p></br>
+			</li>
+			
+			<li>Here the entered value and the maximum water cement ratio will be compared and if entered is less than the maximum value then proceed to the NEXT step or else start from the beginning.</br>
+			<p><center><img src="../images/mix5.JPG"style = "width:740px; height:600px;"></img></center></p></br>
+			</li>
+			
+			<li>Select the water content for the selected nominal size of the aggregate, click NEXT button..</br>
+			<p><center><img src="../images/mix6.JPG"style = "width:740px; height:600px;"></img></center></p></br>
+			</li>
+			
+			<li>Here check the water content selected based on the slump value, then the water content can be reduced by using super plasticizers, to reduce enter value between 0-29%( Note: 0% indicates no super plasticizers are used). </br>
+			<p><center><img src="../images/mix7.JPG"style = "width:740px; height:600px;"></img></center></p></br>
+			</li>
+			
+			<li>Check the final selected water content with the minimum water content required for that exposure condition, click NEXT.</br>
+			<p><center><img src="../images/mix8.JPG"style = "width:740px; height:600px;"></img></center></p></br>
+			</li>
+			
+			<li>For the selected water cement ratio the volume of coarse and fine aggregates is calculated.</br>
+			<p><center><img src="../images/mix9.JPG"style = "width:740px; height:600px;"></img></center></p></br>
+			</li>
+			
+			<li>The volume of all the concrete mix materials is calculated, then click on NEXT button to view the mix proportions.</br>
+			<p><center><img src="../images/mix10.JPG"style = "width:740px; height:600px;"></img></center></p></br>
+			</li>
+			
+			
+			<li>Here the final mix proportion is obtained. </br>
+			<p><center><img src="../images/mix11.JPG"style = "width:740px; height:600px;"></img></center></p></br>
+			</li>
+			
+     		</ol></br></br></br>
+ 
+
+
+   </div>
+</div>                      
+</section>
+  <section id="experiment-article-section-3">
+                    <div class="icon" id="experiment-article-section-3-icon">
+                  
+                    <img src="../images/selfevaluation.jpg" style="padding-left:50px;">
+</div>
+                    
+
+                    <div class="heading" id= "experiment-article-section-3-heading">
+                       Self Evaluation
+                    </div>
+		<div class="content" id=
+                    "experiment-article-section-3-content">
+                        <div class="divQuiz">
+                            <div id="displayQuiz">
+                                <form id="form11" method="post" name="form11">
+                                  <p> Check your understanding after you have gone through the basic theory and the procedure to use the simulator.</p>                             
+ <a style="margin-top: 40px;float: left;
+width: auto;
+padding: 5px 15px;
+color: #FFF;
+background-color: #008B8B;
+border: 1px solid #FFF;
+border-radius: 5px;
+text-decoration: none;" href="index2.html">Get Started</a> 
+                                </form>
+                            </div>
+<br>
+                        </div>
+                    </div>
+                </section>
+
+
+  <section id="experiment-article-section-4">
+                    <div class="icon" id="experiment-article-section-4-icon">
+                    <!-- Enclose the icon image of your lab.-->
+                    <img src="../images/simulation.jpg" style="padding-left: 20px;"></div>
+
+                    <div class="heading" id="experiment-article-section-4-heading">
+                        Simulator
+                    </div>
+					<div class="content" id= "experiment-article-section-4-content"><center>
+					<iframe noscroll="" scrolling="no" src="../images/simulation/concrete mix design/index.html" height="610px" width="810px"></iframe></center>
+					</div> 
+
+               </section>
+
+
+
+        <section id="experiment-article-section-5">
+            <div class="icon" id="experiment-article-section-5-icon">
+                    <!-- Enclose the icon image of your lab -->
+                <img src="../images/assignment.jpg" style="padding-left: 27px;"> </div>
+                    <!-- The heading for the section can be enclosed in a div tag. -->
+
+                <div class="heading" id="experiment-article-section-5-heading">
+                        Assignment
+                </div>
+
+			<div class="content" id="experiment-article-section-5-content">
+                <!-- Assignment Content-->
+				<ol>
+					<li>How the mix design varies by using  admixture?</li>
+				</ol>
+	
+				
+				<!-- Assignment Content End-->      
+			</div>
+        </section>
+				
+
+
+<section id="experiment-article-section-8">
+<div class="icon" id="experiment-article-section-8-icon">
+<!-- Enclose the icon image of your lab.-->
+<img src="../images/quiz.jpg">
+</div>
+<div class="heading" id="experiment-article-section-8-heading">
+                        Quiz
+</div>
+
+<div class="content" id="experiment-article-section-8-content">
+<div class="divQuiz">
+<div id="displayQuiz">
+<form id="form11" method="post" name="form11">
+<p> Check your ability to answer some of the questions relevant to the simulation that you used.</p> 
+ <a style="margin-top: 40px;float: left;
+width: auto;
+padding: 5px 15px;
+color: #FFF;
+background-color: #008B8B;
+border: 1px solid #FFF;
+border-radius: 5px;
+text-decoration: none;" href="index1.html">Get Started</a>
+
+
+                                   
+                                </form>
+<br>
+                            </div>
+<br>
+                        </div>
+                    </div>
+</section> 
+
+                <section id="experiment-article-section-7">
+                    <div class="icon" id="experiment-article-section-7-icon">
+                    <img src="../images/video.jpg" style="padding-left:7px">
+			</div>
+
+                    <div class="heading" id="experiment-article-section-7-heading">
+                        Videos
+                    </div>
+
+                    <!--<div class="content" id="experiment-article-section-7-content">
+                        <div class="divContent">
+                         NPTEL:<br>
+                             <a href="https://www.youtube.com/watch?v=bX_m53Xexvk&list=PLAC668A0566953FB5">Mechanical Vibrations</a>
+<br>
+                        </div>
+                    </div>-->
+                </section>
+
+           <section id="experiment-article-section-6">
+                    <div class="icon" id="experiment-article-section-6-icon">
+                   
+                    <img src="../images/reference.jpg" style="padding-left: 25px;">
+</div>
+
+                    <div class="heading" id="experiment-article-section-6-heading">
+                        References
+                    </div>
+
+                    <div class="content" id="experiment-article-section-6-content">
+                        <div class="divContent">
+                       <ul>
+							<li><p style="font-family:courier new,courier,monospace; font-size:18px;">IS:456-2000: Plain and Reinforced Concrete Code of Practice, 4th revision,2000.</p></li>
+							<li><p style="font-family:courier new,courier,monospace; font-size:18px;">IS:10262-2009: Concrete Mix Proportioning Guidelines, first revision,2009.</p> </li>
+							<li><p style="font-family:courier new,courier,monospace; font-size:18px;">B. C. Punmia, Ashok Kumar Jain, Soil Mechanics and Foundations, Laxmi Publications,2005.</p></li>
+							<li><p style="font-family:courier new,courier,monospace; font-size:18px;">M.S. Shetty, Concrete Technology, S. Chand publications, 2009.</p></li>
+							<li><p style="font-family:courier new,courier,monospace; font-size:18px;">M.L. Gambhir, Concrete Technology, Tata McGraw-Hill Education, 2004.</p></li>
+						</ul>
+				</div>
+                    </div>
+
+                </section>
+
+<section id="lab-article-section-9">
+
+<div id="lab-article-section-9-icon" class="icon">
+<!-- Enclose the icon image for the section. -->
+<img src="../images/feedback.jpg" style="padding-left: 16px;" />
+</div>
+<!-- The heading for the section can be enclosed in a div tag and shown with a <h2> tag -->
+<div id="lab-article-section-9-heading" class="heading">
+Feedback
+</div>
+<!-- Write the section content inside a paragraph element, You can also include images with <img> tag -->
+<div id="lab-article-section-9-content" class="content">
+
+
+<!-- Custom form start -->
+
+<form method="POST" action="http://rtlabs.nitk.ac.in/feedback.php" role="form">
+<input type="hidden" name="code" value="1">
+<div class="form-group"> 
+<label for="name">What is your name?</label> <span class="error">*</span><br>
+<input type="text" style="width:700px;" name="name" class="form-control" value="" placeholder="You may chose to be Anonymous if you do not wish to disclose your name."required="">
+<br><br>
+</div>
+<div class="form-group"> 
+<label for="org">Which organization are you associated with?</label><span class="error">*</span><br>
+<input type="text" style="width:700px;" name="org"  class="form-control" value="" placeholder="Name of your College/Institute/University/Organization."required="">
+<br><br>
+</div>
+<div class="form-group">
+<label for="discipline">Which is your primary discipline?</label><span class="error">*</span><br>
+<input type="text" style="width:700px;" name="discipline" class="form-control" value="" placeholder="Example: Mechanical Engineering, Nanotechnology, Biomedical, Mathematics etc."required="">
+
+<br><br>
+</div>
+<label>Which of the following best describes your current work?</label> <span class="error">*</span><br>
+<div class="radio"><label><input type="radio" required name="occ" checked="true"  value="Studying">Studying<br></label></div>
+<div class="radio"><label><input type="radio" required  name="occ"  value="Teaching">Teaching<br></label></div>
+<div class="radio"><label><input type="radio" required name="occ"   value="Research">Research<br></label></div>
+<div class="radio"><label><input type="radio" required name="occ"  value="Industry">Industry<br></label></div>
+<div class="radio"><label><input type="radio" required name="occ"   value="other">Other <input type="text" name="occ-other"></input></label></div>
+
+<br>
+<div class="form-group">
+<label>Experiment Performed </label><span class="error">* </span><br>
+<select class="form-control" name="exp"  required>
+<option value="Choose" disabled>Choose</option>
+<option value="Concrete mix design">Concrete mix design</option>
+<option value="Standard consistency of cement">Standard consistency of cement</option>
+<option value="Specific Gravity of Cement">Specific gravity of cement</option>
+<option value="Specific gravity of fine aggregate">Specific gravity of fine aggregate</option>
+<option value="Specific gravity of coarse aggregate">Specific gravity of coarse aggregate</option>
+<option value="Fineness modulus of fine aggregate">Fineness modulus of fine aggregate</option>
+<option value="Fineness modulus of Coarse aggregate">Fineness modulus of Coarse aggregate</option>
+<option value="Fineness modulus of cement">Fineness modulus of cement</option>
+<option value="Initial setting time of cement">Initial setting time of cement</option>
+<option value="Slump test">Slump test</option>
+</select>
+
+</div>
+<br>
+<label>Please tell your agreement with the following </label><span class="error">* </span><br>
+<table style="width:100%; margin:0">
+<tr>
+<td></td>
+<td style="text-align:center; width:70px">Excellent</td>    
+<td style="text-align:center; width:70px">Very Good</td>
+<td style="text-align:center; width:70px">Good</td>
+<td style="text-align:center; width:70px">Average</td>
+<td style="text-align:center; width:70px">Needs Improvement</td>
+</tr>
+<tr>
+<td>To what degree was the actual lab environment simulated</td>
+
+<td style="text-align:center;">   <div class="radio"><label><input type="radio" checked="true"  required name="rea"  value="5"></label></div></td>    
+<td style="text-align:center;">   <div class="radio"><label><input type="radio" required  name="rea"  value="4"></label></div></td>
+<td style="text-align:center;">   <div class="radio"><label><input type="radio"required name="rea"   value="3"></label></div></td>
+<td style="text-align:center;">   <div class="radio"><label><input type="radio" required name="rea"  value="2"></label></div></td>
+<td style="text-align:center;">   <div class="radio"><label><input type="radio" required name="rea"  value="1"></label></div></td>
+</tr>
+<tr>
+<td>The theory and procedure were found to be helpful</td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required checked="true"  name="tnp"  value="5"></label></div></td>    
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required  name="tnp"   value="4"></label></div></td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required  name="tnp"   value="3"></label></div></td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required name="tnp"  value="2"></label></div></td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required name="tnp"   value="1"></label></div></td>
+</tr>
+<tr>
+<td>The results of simulation/experiment were easily interpretable</td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio" checked="true"  required name="eas"  value="5"></label></div></td>    
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required name="eas"   value="4"></label></div></td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required name="eas"  value="3"></label></div></td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required name="eas"  value="2"></label></div></td>
+<td style="text-align:center;"> <div class="radio"><label><input type="radio"required name="eas"   value="1"></label></div></td>
+</tr>
+</table>
+<br>
+<div class="form-group">
+<label for="help">How helpful do you feel the system is?</label>
+<br><input type="text" style="width:700px;" class="form-control"name="help" value="">
+<br><br>
+</div>
+<label>Please answer the following questions</label><span class="error">* </span><br>
+<table style="width:100%; border:none; margin:0">
+<tr>
+<td></td>
+<td>Yes</td>    
+<td>No</td>
+</tr>
+<tr>
+<td>Did you get the feel of actual lab while performing the simulation/experiments</td>
+<td> <div class="radio"><label><input type="radio"required name="a" checked="true"  value="Y"></label></div></td>    
+<td> <div class="radio"><label><input type="radio"required name="a"  value="N"></label></div></td>
+</tr>
+<tr>
+<td>Did you read the theory and procedure before performing the simulation/experiments</td>
+<td> <div class="radio"><label><input type="radio"required name="b" checked="true"  value="Y"></label></div></td>    
+<td> <div class="radio"><label><input type="radio"required name="b"   value="N"></label></div></td>
+</tr>
+
+<tr>
+<td>Could you conduct the simulation/experiment successfully</td>
+<td> <div class="radio"><label><input type="radio"required name="c" checked="true"  value="Y"></label></div></td>    
+<td> <div class="radio"><label><input type="radio"required name="c" value="N"></label></div></td>
+</tr>
+<tr>
+<td>Could you compare your results with the given typical results in explore</td>
+<td> <div class="radio"><label><input type="radio"required name="d" checked="true"  value="Y"></label></div></td>    
+<td> <div class="radio"><label><input type="radio"required name="d"   value="N"></label></div></td>
+</tr>
+<tr>
+<td>Do you think performing experiments through virtual labs are more challenging than the real experiments</td>
+<td> <div class="radio"><label><input type="radio"required name="e"  checked="true"  value="Y"></label></div></td>    
+<td> <div class="radio"><label><input type="radio"required name="e"   value="N"></label></div></td>
+</tr>
+<tr>
+<td>Do you think doing experiments through virtual lab gives scope for more innovative and creative research work</td>
+<td> <div class="radio"><label><input type="radio"required name="f"  checked="true"  value="Y"></label></div></td>    
+<td> <div class="radio"><label><input type="radio"required name="f"  value="N"></label></div></td>
+</tr>
+</table>
+<br><br>
+<div class="form-group">
+<label for="c1">Please mention any problems/difficulties you faced while performing the simulation/experiment. It will help us improve the content for your later visits.</label>
+<br><textarea  name="c1" class="form-control" rows="4" cols="50"></textarea>
+<br><br>
+</div>
+<div class="form-group">
+<label for="c2">What do you find most interesting thing about the simulation/experiment? We would be happy to know what delighted you.</label>
+<br><textarea name="c2" class="form-control" rows="4" cols="50"></textarea>
+<br><br>
+</div>
+<div class="form-group">
+<label for="c2">Is there anything else that you would like to tell us ?</label>
+<br><textarea name="c3"class="form-control"  rows="4" cols="50"></textarea>
+<br><br>
+</div>
+<button type="submit" name="submit"  class="btn btn-default" value="Submit"> Submit </button>
+</form>
+
+
+<!-- Custom form complete -->
+
+</div>
+	
+</section>
+               
+            </div>
+        </article>
+    </div>
+</body>
+</html>

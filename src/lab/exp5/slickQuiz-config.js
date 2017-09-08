@@ -24,7 +24,7 @@ var quizJSON = {
                 {"option": "All the above",     "correct": true} // no comma here
             ],
             "correct": "<p><span>Right answer</span></p>",
-            "incorrect": "<p><span>wrong</span> It's wrong,</br> Ans:All the above</p>" // no comma here
+            "incorrect": "<p><span>wrong</span> It's wrong,</br> Ans: All the above</p>" // no comma here
         },
         { // Question 2 - Multiple Choice, Multiple True Answers, Select Any
             "q": "In lean mixes large aggregate give the best value for strength but in rich mixes, smaller aggregates results in higher strength.",
@@ -33,7 +33,7 @@ var quizJSON = {
                 {"option": "False",  "correct": false} // no comma here
             ],
             "correct": "<p><span>Right answer</span> </p>",
-            "incorrect": "<p><span>wrong</span> It's wrong,</br> Ans:True</p>" // no comma here
+            "incorrect": "<p><span>wrong</span> It's wrong,</br> Ans: True</p>" // no comma here
         },
         
 		
@@ -46,7 +46,7 @@ var quizJSON = {
 				{"option": "Gap graded",	 "correct": true}//no comma here
             ],
             "correct": "<p><span>Right answer</span> </p>",
-            "incorrect": "<p><span>wrong</span> It's wrong,</br> Ans:Gap graded</p>" // no comma here
+            "incorrect": "<p><span>wrong</span> It's wrong,</br> Ans: Gap graded</p>" // no comma here
         },
 		 { // Question 4 - Multiple Choice, Multiple True Answers, Select Any
             "q": "The coefficient of uniformity is",
@@ -57,7 +57,7 @@ var quizJSON = {
                 {"option": "C<sub>u</sub> = D<sub>30</sub><sup>2</sup>/D<sub>60</sub>", 	 "correct": false} // no comma here
             ],
             "correct": "<p><span>Right answer</span> </p>",
-            "incorrect": "<p><span>wrong</span> It's wrong,</br> Ans:C<sub>u</sub> = D<sub>60</sub>/D<sub>10</sub></p>" // no comma here
+            "incorrect": "<p><span>wrong</span> It's wrong,</br> Ans: C<sub>u</sub> = D<sub>60</sub>/D<sub>10</sub></p>" // no comma here
         },
 		
 		{ // Question 5 - Multiple Choice, Multiple True Answers, Select Any
@@ -69,7 +69,7 @@ var quizJSON = {
                 {"option": "Linear curve", 	 "correct": false} // no comma here
             ],
             "correct": "<p><span>Right answer</span> </p>",
-            "incorrect": "<p><span>wrong</span> It's wrong,</br> Ans:Very steep curve</p>" // no comma here
+            "incorrect": "<p><span>wrong</span> It's wrong,</br> Ans: Very steep curve</p>" // no comma here
         }
 		
    // no comma here

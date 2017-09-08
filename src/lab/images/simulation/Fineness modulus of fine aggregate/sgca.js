@@ -385,27 +385,44 @@ refresh();
 		 document.getElementById('tare2-2').style.visibility="hidden";
          document.getElementById('onarm').style.visibility="hidden";
 		 setTimeout(function()
-		 {
-		     document.getElementById('hand').style.visibility="visible";
+		 {   if(flag==1)
+			 {
+		     document.getElementById('handr').style.visibility="visible";
+			 }
+			 else if(flag==2)
+			 {
+				document.getElementById('handb').style.visibility="visible";
+			 }
 		 },500);
 		 setTimeout(function()
 		 {
              myInt = setInterval(function(){ animatearrow(); }, 500);
-		     document.getElementById('arrow1').style="visibility:visible ;position:absolute; left:560px; top:190px; height: 40px; z-index: 10;";
+		     document.getElementById('arrow1').style="visibility:visible ;position:absolute; left:660px; top:175px; height: 40px; z-index: 10;";
 		     document.getElementById("arrow1").style.WebkitTransform = "rotate(360deg)"; 
 		     // Code for IE9
 		     document.getElementById("arrow1").style.msTransform = "rotate(360deg)"; 
 		     // Standard syntax
 		     document.getElementById("arrow1").style.transform = "rotate(360deg)";
-             document.getElementById('hand').onclick=function(){step25();} 
+			 if(flag==1)
+             document.getElementById('handr').onclick=function(){step25();} 
+		     else if(flag==2)
+			 document.getElementById('handb').onclick=function(){step25();}
 		 },1000);			 
     }
 	
 	function step25()
 	{
 	     myStopFunction();
-         document.getElementById('hand').style.transformOrigin = "100% 80%";
-	     document.getElementById('hand').style.animation = "valveturn-4 1.5s forwards ";
+		 if(flag==1)
+		 {
+         document.getElementById('handr').style.transformOrigin = "100% 80%";
+	     document.getElementById('handr').style.animation = "valveturn-4 1.5s forwards ";
+		 }
+		 else if(flag==2)
+		 {
+			 document.getElementById('handb').style.transformOrigin = "100% 80%";
+	         document.getElementById('handb').style.animation = "valveturn-4 1.5s forwards ";
+		 }
 	    if(flag==1)
 	    {
 			   
@@ -420,10 +437,9 @@ refresh();
 			     document.getElementById('prs2').style.visibility="hidden";
 			     document.getElementById('v2-2').style.visibility="visible";
              },1000);
-             setTimeout(function()
-			 {
-				 document.getElementById('hand').style.visibility="hidden";
-			 },1500);
+             setTimeout(function(){
+			 		     document.getElementById('handr').style.visibility="hidden";
+			  },1500);
 		}
 	    else if(flag==2)
 	    {
@@ -441,7 +457,7 @@ refresh();
              },1000);
 			 setTimeout(function()
 			 {
-				 document.getElementById('hand').style.visibility="hidden";
+				 document.getElementById('handb').style.visibility="hidden";
 			 },1500);
 
 	    }

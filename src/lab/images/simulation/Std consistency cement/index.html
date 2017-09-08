@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+
+<title>SOLVE</title>
+<link rel="stylesheet" href="scc.css" />
+<!-- <link rel="stylesheet" type="text/css" href="csshake.min.css"> -->
+<link rel="stylesheet" type="text/css" href="http://csshake.surge.sh/csshake.min.css">
+<link rel="stylesheet" type="text/css" href="http://csshake.surge.sh/csshake-vertical.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> 
+<script type="text/javascript" src= "jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src= "scc.js"></script>
+<script type="text/javascript" src= "jquery-2.1.4.js"></script>
+<script type="text/javascript" src= "ej.web.all.js"></script>
+<script type="text/javascript" src="/assets/script/canvasjs.min.js"></script>
+
+
+
+<script>
+var values=[26,28,30,32];
+var values1=[28,19,11,6];
+var simsubscreennum=0;
+var temp=0;
+var lnt=0;
+</script>
+</head>
+
+<body style="margin:0">
+<!--Simulation Screen start		-->
+<div id="simscreen">
+
+<!--Title of Simulation		-->
+<div id="title"><h3>Standard Consistency of cement</h3></div>
+
+<!--SubScreen Home	-->	
+<div class="simsubscreen" id="canvas0">
+<h4 class="incanvas" style="font-family:verdana;" >Objective</h4>
+<p class="incanvas" style="font-family:verdana; font-size:14px;">To determine the standard consistency of given sample of cement by vicats apparatus.</p>
+<h4 class="incanvas" style="font-family:verdana;">Apparatus used:</h4>
+<p class="incanvas" style="font-family:verdana; font-size:14px;">Vicat apparatus with vicat plunger,vicat mould, measuring jar, weighing balance etc..</p>
+<img id="" style="position: absolute; left: 340px; top: 273px;" src="images/ewm.png"/>
+<img id="" style="position: absolute; left: 65px; top: 118px;" src="images/vic1.png"/>
+
+</div>
+
+
+<!--Step1	-->	
+<div class="simsubscreen" id="canvas1" style="visibility:hidden">
+<strong id="titlestep" class="incanvas">STEP </strong>
+<span class="circlebg" id="stepnumber">&nbsp;1&nbsp;</span>
+
+<p id="pumptext" class="steptext" style="font-family:verdana; font-size:14px;">&nbsp;Take cement in a pan and measure 300gram of cement using the weighing balance.</p>
+
+<img id="ewm1" style="position: absolute; left: 230px; top: 255px;" src="images/ewm1.png"/>
+<img id="mw" style="position: absolute; left: 310px; top: 342px;visibility:hidden" src="images/mw.png"/>
+<img id="hp2-1" style="position: absolute; left:2px; top: 90px;visibility:hidden;" src="images/hp.png"/>
+
+<img id="swc2"  style="position: absolute; visibility: hidden; left: 468px; top: 120px;" src="images/ssc.png"/> 
+<img id="wc" style="position: absolute; left: 318px; top: 229.5px; visibility:hidden" src="images/sc.png"/>
+
+<img id="p2" style="position: absolute; left: 251px; top: 212.25px;cursor:move;visibility:hidden" src="images/plate.png"/>
+
+
+<img id="pwc" style="position: absolute; left:350px; top:185px;visibility:hidden" src="images/pc.png"/>
+
+<img id="hand"  style="position: absolute; visibility: hidden; left: 420px; top: 65px;" src="images/pour.png"/> 
+
+<img id="on2-1" style="position: absolute; left:300px; top: 380px; cursor:pointer;" src="images/on.png"/>
+<img id="off2-1" style="position: absolute; left: 330px; top: 380px;" src="images/off.png"/>
+<img id="zero2-1" style="position: absolute; left: 360px; top: 380px;" src="images/zero.png"/>
+<img id="tare2-1" style="position: absolute; left: 390px; top: 380px; cursor:pointer;" src="images/tare2.png"/>
+
+<img id="on2-2" style="position: absolute; left:295px; top: 380px;visibility:hidden" src="images/onblue.png"/>
+<img id="on2-3" style="position: absolute; left:300px; top: 380px;visibility:hidden; cursor:pointer;" src="images/on.png"/>
+<img id="tare2-3" style="position: absolute; left: 390px; top: 380px;visibility:hidden; cursor:pointer;" src="images/tare2.png"/>
+<img id="tare2-2" style="position: absolute; left: 385px; top: 380px;visibility:hidden; cursor:pointer;" src="images/tare3.png"/>
+<p id="v2-1" style="position:absolute;left: 342px; top:334px;visibility:hidden;font-family:verdana; font-size:14px;">00.00   g</p>
+<p id="v2-2" style="position:absolute;left: 326px; top:334px;visibility:hidden;font-family:verdana; font-size:14px;">300.00   g</p>
+</div>
+
+
+<!--Step2-->	
+<div class="simsubscreen" id="canvas2" style="visibility:hidden"> 
+<strong id="titlestep" class="incanvas">STEP &nbsp;</strong> 
+<span class="circlebg" id="stepnumber">&nbsp;2&nbsp;</span>
+<p id="pumptext-2" class="steptext" style="font-family:verdana; font-size:14px; ">&nbsp;Take about water by weigh of dry cement and mix it thoroughly with the cement. 
+The gauging time should not be more than 3 to 5 minutes.</p> 
+<img id="2-1" style="position: absolute; left: 50px; top:150px; visibility:hidden;" src="images/calculation.png"/>
+<p id="2-2" style="position:absolute;left: 50px; top:250px; visibility:hidden; font-family:verdana; font-size:16px;">Quantity of water to be added = ( x 300 )/100 </p>
+<p id="2-3" style="position:absolute;left: 50px; top:325px; visibility:hidden; font-family:verdana; font-size:16px;">Quantity of water to be added =  ml</p>
+<p id="2-4" style="position:absolute;left: 13px; top:125px; visibility:hidden; font-family:verdana; font-size:16px;">Quantity of water to be added =  ml</p>
+
+<img id="cylwat" style="position: absolute; left: 338px; top:345.75px; visibility:hidden;" src="images/cylwat.png"/>
+<img id="coverblue" style="position:absolute; left:222px; top:407px; visibility:hidden;" src="images/coverblue.png"/>
+<img id="coverblue2" style="position:absolute; left:222px; top:408px; visibility:hidden;" src="images/coverblue2.png"/>
+
+<img id="shaker1" style="position:absolute; left:320px; top:275px; visibility:hidden; cursor:pointer;" src="images/shaker1.png"/>
+<img id="shaker2" style="position:absolute; left:310px; top:265px; visibility:hidden;" src="images/shaker2.png"/>
+<img id="cement" style="position: absolute; left: 227px; top: 397.5px; visibility:hidden;" src="images/cement.png"/>
+
+<img id="wc3" style="position: absolute; left: 227px; top: 397.5px; visibility:hidden;" src="images/sc.png"/>
+<img id="cement2" style="position: absolute; left: 227px; top: 400.5px; visibility:hidden;" src="images/cement2.png"/>
+<img id="p3" style="position: absolute; left: 161px; top: 380.25px;visibility:hidden;" src="images/plate2.png"/>
+
+<img id="water" style="position:absolute; left:382px; top:190px; visibility:hidden;" src="images/water.png"/>
+<img id="water1" style="position:absolute; left:259px; top:377px; visibility:hidden;" src="images/water.png"/>
+
+<img id="msrdev" style="position:absolute; left: 320px; top:190px; visibility:hidden;" src="images/msrdev.png"/>
+<img id="msrdev1" style="position:absolute; left: 413px; top:158px; visibility:hidden; cursor:pointer;" src="images/msrdev1.png"/>
+<img id="msrdev2" style="position:absolute; left:275px; top:305px; visibility:hidden;" src="images/msrdev2.png"/>
+<img id="msrdev3" style="position:absolute; left: 413px; top:158px; visibility:hidden; cursor:pointer;" src="images/84.png"/>
+<img id="msrdev4" style="position:absolute; left: 413px; top:158px; visibility:hidden; cursor:pointer;" src="images/90.png"/>
+<img id="msrdev5" style="position:absolute; left: 413px; top:158px; visibility:hidden; cursor:pointer;" src="images/96.png"/>
+
+<img id="hn" style="position:absolute; left:395px; top:65px; visibility:hidden; cursor:pointer;" src="images/hn.png"/>
+<img id="hn2" style="position:absolute; left:400.5px; top:95px; visibility:hidden;" src="images/hn2.png"/>
+
+</div>
+
+
+<!--Step3-->	
+<div class="simsubscreen" id="canvas3" style="visibility:hidden">
+<strong class="incanvas">STEP &nbsp;</strong><span class="circlebg">&nbsp;3&nbsp;</span>
+<p class="steptext" style="font-family:verdana; font-size:14px;">&nbsp;Fill the vicat mould resting upon non-porous plate.</p>
+
+<img id="cement1" style="position: absolute; left: 127px; top: 297.5px; visibility:hidden;" src="images/cement.png"/>
+<img id="p4" style="position: absolute; left: 61px; top: 280.25px; cursor:move; visibility:hidden;" src="images/plate2.png"/>
+<img id="p5" style="position: absolute; left: 61px; top: 280.25px; cursor:move; visibility:hidden;" src="images/plate3.png"/>
+
+<img id="mould1" style="position:absolute; left:350px; top:250px; visibility:hidden;" src="images/mould1.png"/>
+<img id="mould2" style="position:absolute; left:350px; top:250px; visibility:hidden;" src="images/mould2.png"/>
+<img id="mould3" style="position:absolute; left:350px; top:250px; visibility:hidden;" src="images/mould3.png"/>
+
+<img id="shaker" style="position:absolute; left:20px; top:135px; visibility:hidden; cursor:pointer;" src="images/shaker.png"/>
+<img id="shaker3" style="position:absolute; left: 75px; top: 249px; visibility:hidden;" src="images/shaker3.png"/>
+<img id="shaker4" style="position:absolute; left:375px; top:180px; visibility:hidden;" src="images/shaker3.png"/>
+<img id="shaker5" style="position:absolute; left:50px; top:249px; visibility:hidden;" src="images/shaker3.png"/>
+</div>
+
+ 
+ 
+<!--Step4	-->	
+<div class="simsubscreen" id="canvas4" style="visibility:hidden;">
+<strong class="incanvas">STEP &nbsp;</strong><span class="circlebg">&nbsp;4&nbsp;</span>
+<p class="steptext" style="font-family:verdana; font-size:14px;" >&nbsp;Fix the 1mm<sup>2</sup> vicat plunger and the place the mould under the test setup.</p>
+<img id="setup4-1" style="position: absolute; left: 151px; top: 75px; " src="images/pic2.png"/>
+<img id="setup4-2" style="position: absolute; left: 194px; top: 270px; " src="images/pic1.png"/>
+<img id="setup" style="position: absolute; left: 121px; top: 160px; " src="images/setup2.png"/>
+<img id="setup4-3" style="position: absolute; left: 208px; top: 180px; " src="images/pic3.png"/>
+<img id="setup4-4" style="position: absolute; left: 185.5px; top: 220px; " src="images/pic4.png"/>
+<img id="hnd2" style="position: absolute; left: 56px; top: 315px; visibility:hidden; " src="images/hnd2.png"/>
+<img id="screw" style="position:absolute; left:227.50px; top: 307px; cursor:pointer;" src="images/screw.png" />
+<img id="mould4" style="position:absolute; left:370px; top:250px; " src="images/mould4.png"/>
+<img id="mould4-1" style="position:absolute; left:77.5px; top:380px; visibility:hidden;" src="images/mould4.png"/>
+<img id="setup4-5" style="position: absolute; left: 194px; top: 318px; visibility:hidden;" src="images/pic5.png"/>
+<p id="stat1" style="position: absolute; left:380px; top:220px;font-family:verdana; font-size:16px; visibility:hidden;">Initial Reading = 40mm</p>
+</div>
+
+
+<!--Step5	-->	
+<div class="simsubscreen" id="canvas5" style="visibility:hidden">
+<strong class="incanvas" id="step5">STEP &nbsp;</strong><span class="circlebg" id="step5-1">&nbsp;5&nbsp;</span>
+<p class="steptext" id="step5-2" style="font-family:verdana; font-size:14px;" >&nbsp;Lower the plunger to touch the surface of the mould and release it quickly to sink into the paste.</p>
+<img id="setup5-1" style="position: absolute; left: 231px; top: 85px; " src="images/pic2.png"/>
+<img id="setup5-6" style="position: absolute; left: 288px; top: 181px; visibility:hidden;" src="images/pic3.png"/>
+<img id="setup5" style="position: absolute; left: 201px; top: 160px; " src="images/setup2.png"/>
+<img id="setup5-3" style="position: absolute; left: 288px; top: 180px; cursor:pointer;" src="images/pic3.png"/>
+<img id="setup5-4" style="position: absolute; left: 265.5px; top: 231.5px; " src="images/pic4.png"/>
+<img id="hnd5" style="position: absolute; left: 106px; top: 315px; visibility:hidden; " src="images/hnd2.png"/>
+<img id="screw5" style="position:absolute; left:307.50px; top: 307px; cursor:pointer;" src="images/screw.png" />
+<img id="mould5-1" style="position:absolute; left:160.5px; top:380px; " src="images/mould4.png"/>
+<img id="setup5-5" style="position: absolute; left: 274px; top: 318px; " src="images/pic5.png"/>
+<img id="mould5-2" style="position: absolute; left: 158px; top: 318px; visibility:hidden;" src="images/mould5.png"/>
+<img id="meter5" style="position:absolute; left:500px; top:170px; visibility:hidden;" src="images/meter.png" />
+<img id="pic6" style="position:absolute; left:532.5px; top:222.5px; visibility:hidden;" src="images/pic6.png" />
+<img id="hg5" style="position:absolute; left: 420px; top: 155px; visibility:hidden;" src="images/hookgauge.png" />
+<p id="stat2" style="position: absolute; left:435px; top:415px; font-family:verdana; font-size:16px; visibility:hidden;">Final Reading = </p>
+</div>
+
+<!--Step6	-->	
+<div class="simsubscreen" id="canvas6" style="visibility:hidden">
+<h2 id="step6-1" style="font-family:verdana;">Observations:</h2>
+<p class="stepfont" id="can6-3" style="position:absolute; top:100px; left:100px">Quantity of water added = ml</p>
+<p class="stepfont" id="can6-1" style="position:absolute; top:150px; left:100px">Initial Reading = 40mm</p>
+<p class="stepfont" id="can6-2" style="position:absolute; top: 200px; left:100px">Final Reading = </p>
+
+<table id="tab" border size=1 style="visibility:hidden; font-family:verdana; font-size:14px;">
+<caption style="text-align:left; font-size=50px; font-family:verdana; font-size:14px;  padding:10px; margin: 8px 0;">Weight of the Cement taken  = 300g</caption>
+<tr>
+    <th style="text-align:center; font-family:verdana; font-size:14px; padding: 10px; margin: 8px 0;">Percentage of Water</th>
+	<th style="text-align:center; font-family:verdana; font-size:14px; padding: 10px; margin: 8px 0;">Initial Reading in mm</th>
+    <th style="text-align:center; font-family:verdana; font-size:14px; padding: 10px; margin: 8px 0;">Final Reading in mm</th>
+</tr>
+
+<tr>
+    <td style="text-align:center; font-family:verdana; font-size:14px; padding: 10px; margin: 8px 0;">26</td>
+    <td style="text-align:center; font-family:verdana; font-size:14px; padding: 10px; margin: 8px 0;">40</td>
+    <td style="text-align:center; font-family:verdana; font-size:14px; padding: 10px; margin: 8px 0;">28</td>
+</tr>
+
+<tr>
+	<td style="text-align:center; font-family:verdana; font-size:14px; padding: 10px; margin: 8px 0; ">28</td>
+	<td style="text-align:center; font-family:verdana; font-size:14px; padding: 10px; margin: 8px 0;">40</td>
+	<td style="text-align:center; font-family:verdana; font-size:14px; padding: 10px; margin: 8px 0;">19</td>
+</tr>
+
+<tr>
+    <td style="text-align:center; font-family:verdana; font-size:14px; padding: 10px; margin: 8px 0;">30</td>
+    <td style="text-align:center; font-family:verdana; font-size:14px; padding: 10px; margin: 8px 0;">40</td>
+    <td style="text-align:center; font-family:verdana; font-size:14px; padding: 10px; margin: 8px 0;">11</td>
+</tr>
+
+<tr>
+    <td style="text-align:center; font-family:verdana; font-size:14px; padding: 10px; margin: 8px 0;">32</td>
+    <td style="text-align:center; font-family:verdana; font-size:14px; padding: 10px; margin: 8px 0;">40</td>
+    <td style="text-align:center; font-family:verdana; font-size:14px; padding: 10px; margin: 8px 0;">6</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<div id="">	
+<p id="trial" style="text-transform: uppercase;visibility :hidden;font-weight: bold;font-family:verdana; font-size:14px;"><strong>Trial = </strong></p>
+</div>
+
+
+<!--next  Arrow	-->	
+<div id="nav">
+	<img id="nextButton" onclick="navNext(); " src="Images/Next.png" />
+</div>
+
+
+<!--Blinking Arrow	-->	
+<img class ="" id="arrow1" style="visibility:hidden;" src="Images/arrow1.png"/>
+
+<div id="copyright"> &copy; 2016 SOLVE - The Virtual Lab @ NITK Surathkal, Department of Applied Mechanics & Hydraulics</div>
+
+
+
+</body>
+</html>

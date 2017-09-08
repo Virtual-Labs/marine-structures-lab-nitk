@@ -24,7 +24,7 @@ var quizJSON = {
                 {"option": "None of these",     "correct": false} // no comma here
             ],
             "correct": "<p><span>Right answer</span></p>",
-            "incorrect": "<p><span>wrong</span> It's wrong,</br> Ans:Both the above.</p>" // no comma here
+            "incorrect": "<p><span>wrong</span> It's wrong,</br> Ans: Both the above.</p>" // no comma here
         },
         { // Question 2 - Multiple Choice, Multiple True Answers, Select Any
             "q": "According to standard the specific gravity of coarse aggregate should be in between",
@@ -35,15 +35,11 @@ var quizJSON = {
                 {"option": "2.6-2.85",  "correct": false} // no comma here
             ],
             "correct": "<p><span>Right answer</span> </p>",
-            "incorrect": "<p><span>wrong</span> It's wrong,</br> Ans:2.5-2.8</p>" // no comma here
+            "incorrect": "<p><span>wrong</span> It's wrong,</br> Ans: 2.5-2.8</p>" // no comma here
         },
         
-		
-		
-		
-		
 		{ // Question 3 - Multiple Choice, Multiple True Answers, Select Any
-              "q": "Match the correct size of the aggregates<br><img src=\"../images/table4.PNG\"\ height=250 width=268/>",
+              "q": "Match the correct size of the aggregates<br><img src=\"../images/table4.png\"\ height=250 width=268/>",
             "a": [
                 { "option": "a-1,b-2,c-3,d-4,e-5", "correct": false },
                 { "option": "a-5,b-3,c-4,d-1,e-2", "correct": true },
@@ -52,15 +48,8 @@ var quizJSON = {
             ],
 
                 "correct": "<p><span>Right answer</span></p>",
-                "incorrect": "<p><span>wrong</span> It's wrong,Ans:a-5,b-3,c-4,d-1,e-2</p>" // no comma here
+                "incorrect": "<p><span>wrong</span> It's wrong,Ans: a-5,b-3,c-4,d-1,e-2</p>" // no comma here
         },
-		
-		
-		
-		
-		
-		
-		
 		
 		
 		 { // Question 4 - Multiple Choice, Multiple True Answers, Select Any
@@ -72,7 +61,7 @@ var quizJSON = {
                 {"option": "IS 2386 (Part IV) - 1963", 	 "correct": false} // no comma here
             ],
             "correct": "<p><span>Right answer</span> </p>",
-            "incorrect": "<p><span>wrong</span> It's wrong,</br> Ans:IS 2386 (Part III) - 1963</p>" // no comma here
+            "incorrect": "<p><span>wrong</span> It's wrong,</br> Ans: IS 2386 (Part III) - 1963</p>" // no comma here
         }
 		
    // no comma here

@@ -1,5 +1,5 @@
-
-// Setup your quiz text and questions here
+//self evaluation
+// Setup your quiz text and questions here    
 
 // NOTE: pay attention to commas, IE struggles with those bad boys
 
@@ -18,13 +18,13 @@ var quizJSON = {
         { // Question 1 - Multiple Choice, Single True Answer
             "q": "Which of the following will float in water? The density of water is 1 g/ml",
             "a": [
-                {"option": "Object 1: m = 5 g, and v = 2 m",      "correct": true},
-                {"option": "Object 2: m = 3 g, and v = 4 ml",      "correct": false},
-                {"option": "Object 3: m = 3 g, and v = 1 ml",      "correct": false},		// no comma here
-				{"option": "Object 4: m = 4 g, and v = 3 ml",      "correct": false}   
+                {"option": "Object 1: m = 5g, and v = 2m",      "correct": true},
+                {"option": "Object 2: m = 3g, and v = 4ml",      "correct": false},
+                {"option": "Object 3: m = 3g, and v = 1ml",      "correct": false},		// no comma here
+				{"option": "Object 4: m = 4g, and v = 3ml",      "correct": false}   
 			],
 			"correct": "<p><span>Right answer</span></p>",
-			"incorrect": "<p><span>wrong</span> It's wrong,<br>Ans: Object 1: m = 5 g, and v = 2 m</p>" // no comma here
+			"incorrect": "<p><span>wrong</span> It's wrong,<br>Ans: Object 1: m = 5g, and v = 2m</p>" // no comma here
         },
          { // Question 2 - Multiple Choice, Multiple True Answers, Select Any
             "q": "Standard code for physical test for hydraulic cement is",
