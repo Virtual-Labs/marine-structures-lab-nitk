@@ -25,35 +25,35 @@ function navNext()
 
 
 //Move pointing finger with mouse
-$(document).mousemove(function(e)
-{
+// $(document).mousemove(function(e)
+// {
 
-    if(document.getElementById('v2-1').style.visibility=="hidden" && simsubscreennum==2) 
-    {
-         if(e.pageX<800 && e.pageY<600)  
-         {
-             document.getElementById('onarm').style.visibility="visible";
-             $("#onarm").css({left:e.pageX, top:e.pageY});
-         }
-    }
-    else if(document.getElementById('v2-1').style.visibility=="visible" && simsubscreennum==2)
-    {
-	     document.getElementById('onarm').style.visibility="hidden";
-    }
-    if(	document.getElementById('hp2-1').style.visibility=="visible")
-    {
-	    if(e.pageX<800 && e.pageY<600 && simsubscreennum==2) 
-	    {	
-             document.getElementById('onarm').style.visibility="hidden";
-		     document.getElementById('hp2-1').style.visibility="visible";
-             $("#hp2-1").css({left:e.pageX-150+'px', top:e.pageY-150+'px'});
-        }
-    }
-    if(document.getElementById('v2-2').style.visibility=="visible" && simsubscreennum==2)
-    {
-	     document.getElementById('onarm').style.visibility="hidden";
-    }
-}); 
+    // if(document.getElementById('v2-1').style.visibility=="hidden" && simsubscreennum==2) 
+    // {
+         // if(e.pageX<800 && e.pageY<600)  
+         // {
+             // document.getElementById('onarm').style.visibility="visible";
+             // $("#onarm").css({left:e.pageX, top:e.pageY});
+         // }
+    // }
+    // else if(document.getElementById('v2-1').style.visibility=="visible" && simsubscreennum==2)
+    // {
+	     // document.getElementById('onarm').style.visibility="hidden";
+    // }
+    // if(	document.getElementById('hp2-1').style.visibility=="visible")
+    // {
+	    // if(e.pageX<800 && e.pageY<600 && simsubscreennum==2) 
+	    // {	
+             // document.getElementById('onarm').style.visibility="hidden";
+		     // document.getElementById('hp2-1').style.visibility="visible";
+             // $("#hp2-1").css({left:e.pageX-150+'px', top:e.pageY-150+'px'});
+        // }
+    // }
+    // if(document.getElementById('v2-2').style.visibility=="visible" && simsubscreennum==2)
+    // {
+	     // document.getElementById('onarm').style.visibility="hidden";
+    // }
+// }); 
 
 
 
@@ -352,7 +352,6 @@ refresh();
 		 myStopFunction();
 		 document.getElementById('hp2-1').style.visibility="hidden";
 	     document.getElementById('p2').style.visibility="visible";
-         document.getElementById('onarm').style.visibility="hidden";
 		 setTimeout(function()
 		 {
 		     myInt = setInterval(function(){ animatearrow(); }, 500);
@@ -383,7 +382,6 @@ refresh();
          document.getElementById('v2-1').style.visibility="visible";
 	     document.getElementById('tare2-3').style.visibility="visible";
 		 document.getElementById('tare2-2').style.visibility="hidden";
-         document.getElementById('onarm').style.visibility="hidden";
 		 setTimeout(function()
 		 {   if(flag==1)
 			 {
@@ -461,7 +459,6 @@ refresh();
 			 },1500);
 
 	    }
-	     document.getElementById('onarm').style.visibility="hidden";
 		 setTimeout(function()
 		 {
 			 document.getElementById('nextButton').style.visibility="visible";
