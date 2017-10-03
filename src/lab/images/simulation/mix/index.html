@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+
+<title>SOLVE</title>
+<link rel="stylesheet" href="mix.css" />
+<link rel="stylesheet" type="text/css" href="csshake.min.css">
+<link rel="stylesheet" type="text/css" href="http://csshake.surge.sh/csshake.min.css">
+<link rel="stylesheet" type="text/css" href="http://csshake.surge.sh/csshake-vertical.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> 
+<script type="text/javascript" src= "jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src= "mix.js"></script>
+<!-- <script type="text/javascript" src= "jquery-2.1.4.js"></script> -->
+<script type="text/javascript" src= "ej.web.all.js"></script>
+<!-- <script type="text/javascript" src="/assets/script/canvasjs.min.js"></script> -->
+<script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+
+
+
+
+
+<script>
+var simsubscreennum=1;
+var temp=1;
+var lnt=0;
+
+var values=[80,40,20,16,10,4.75,2.36,1.18,0.6,0.3,0.15,0];
+var values1=[0,0,2622.5,349.25,28.25,0,0,0,0,0,0,0];
+var val=[[80,40,20,16,10,4.75,2.36,1.18,0.6,0.3,0.15],
+           [100,100,12.58,0.94,0,0,0,0,0,0,0]];	  
+		   
+	
+
+
+
+</script>
+</head>
+
+
+
+<body style="margin:0" onload="select1.reset(); a2.reset();a3.reset();a4.reset();a5.reset();a6.reset();">
+<!--Simulation Screen start		-->
+<div id="simscreen">
+
+<!--Title of Simulation		-->
+<div id="title"><h3>Concrete Mix Design</h3></div>
+
+<!--Step1	-->	
+<div class="simsubscreen" id="canvas1">
+<strong id="titlestep" class="incanvas">STEP </strong>
+<span class="circlebg" id="stepnumber">&nbsp;1&nbsp;</span>
+
+<p id="pumptext" class="steptext" style="font-family:verdana; font-size:14px;">&nbsp;Select the type of concrete</p>
+
+ <p id="type" style="position:absolute;left: 83px; top:40px;font-family:verdana; font-size:18px;visibility:hidden;"></p>
+ <p id="grade" style="position:absolute;left: 83px; top:100px;font-family:verdana; font-size:14px;visibility:hidden;">Concrete Grade:</p>
+ <p id="exps" style="position:absolute;left: 83px; top:30px;font-family:verdana; font-size:18px;visibility:hidden;">Exposure Condition:</p>
+ <p id="agsize" style="position:absolute;left: 83px; top:30px;font-family:verdana; font-size:18px;visibility:hidden;">Aggregate Size:</p>
+ <p id="slsize" style="position:absolute;left: 83px; top:30px;font-family:verdana; font-size:18px;visibility:hidden;">Slump:</p>
+ <p id="placing" style="position:absolute;left: 83px; top:30px;font-family:verdana; font-size:18px;visibility:hidden;">Concrete Placing:</p>
+
+ <form id="select1" style="position:absolute;left: 82px; top:50px;font-family:verdana; font-size:14px;" onclick="magic();"> 
+<input type="radio" id="p" name="mix" value="plain"> Plain Concrete
+<input type="radio" id="r" name="mix" value="rein"> Reinforced Concrete
+</form>
+
+
+<form id="a2" style="position:absolute;left: 83px; top:120px;font-family:verdana; font-size:14px;visibility:hidden;">
+<Label>Select Concrete Grade :</label>
+<select id="b2">
+<option></option>
+<option id="pm15" name="grade" value="M15">M15</option>
+<option id="pm20" name="grade" value="M20">M20</option>
+<option id="pm25" name="grade" value="M25">M25</option>
+<option id="pm30" name="grade" value="M30">M30</option>
+<option id="pm35" name="grade" value="M35">M35</option>
+<option id="pm40" name="grade" value="M40">M40</option>
+<option id="pm45" name="grade" value="M45">M45</option>
+<option id="pm50" name="grade" value="M50">M50</option>
+<option id="pm55" name="grade" value="M55">M55</option>
+</select>
+</form>
+
+
+
+<form id="a3" style="position:absolute;left: 83px; top:190px;font-family:verdana; font-size:14px;visibility:hidden">
+<Label>Select Exposure Condition :</label>
+<select id="b3">
+<option></option>
+<option id="pml" name="exp" value="Mild">Mild</option>
+<option id="pmd" name="exp" value="Moderate">Moderate</option>
+<option id="ps" name="exp" value="Severe">Severe</option>
+<option id="pvs" name="exp" value="Very Severe">Very Severe</option>
+<option id="px" name="exp" value="Extreme">Extreme</option>
+</select>
+</form>
+
+
+<form id="a4" style="position:absolute;left: 83px; top:260px;font-family:verdana; font-size:14px;visibility:hidden">
+<Label>Select Aggregate Size :</label>
+<select id="b4">
+<option></option>
+<option id="pa10" name="agg" value="10mm">10mm</option>
+<option id="pa20" name="agg" value="20mm">20mm</option>
+<option id="pa40" name="agg" value="40mm">40mm</option>
+</select>
+</form>
+
+
+<form id="a5" style="position:absolute;left: 83px; top:330px;font-family:verdana; font-size:14px;visibility:hidden">
+<Label>Select Slump :</label>
+<select id="b5">
+<option></option>
+<option id="ps25" name="slump" value="25mm">25mm</option>
+<option id="ps50" name="slump" value="50mm">50mm</option>
+<option id="ps75" name="slump" value="75mm">75mm</option>
+<option id="ps100" name="slump" value="100mm">100mm</option>
+</select>
+</form>
+
+<form id="a6" style="position:absolute;left: 83px; top:400px;font-family:verdana; font-size:14px;visibility:hidden">
+<Label>Method of Concrete Placing :</label>
+  <input type="radio" id="pman" name="place" value="Manual">Manual
+  <input type="radio" id="ppump" name="place" value="Pumping">Pumping 
+</form>
+
+</div>
+<!--Step2	-->	
+
+ <div class="simsubscreen" id="canvas2" style="visibility:hidden"> 
+
+<strong id="titlestep" class="incanvas">STEP &nbsp;</strong> 
+ <span class="circlebg" id="stepnumber">&nbsp;2&nbsp;</span>
+ <p id="pumptext-2" class="steptext" style="font-family:verdana; font-size:14px;">&nbsp;Calculate the target strength for mix proportioning.</p> 
+ 
+ <p  id="target" style="position:absolute;left: 86px; top:65px;font-family:verdana; font-size:14px;"></p>
+ 
+ 
+ <!-- Table 5_IS456-2000  -->
+<img id="table1" style="position:absolute;left: 86px; top:180px;" src="Images/table1.png">
+
+ 
+ <form id="sd" style="position:absolute;left: 86px; top:480px;font-family:verdana; font-size:14px;">
+ <label>Enter the value for Standard Deviation (S) : </label>
+ <input id="sdn"  type="text">
+ <input type="button" value="OK" onclick="step2();">
+ </form>
+ <p  id="sd2" style="position:absolute;left: 86px; top:120px;font-family:verdana; font-size:14px;">Target strength for mix proportioning :<span style="font-size:18px;">Fck= fck+1.65(S)</span></p>
+ 
+ <p class="css-typing" id="sd3" style="position:absolute;left: 370px; top:200px;font-family:verdana; font-size:14px;visibility:hidden"></p>
+
+ <p class="anima" class="box" id="sd4" style="position:absolute;left: 370px; top:280px;font-family:verdana; font-size:14px;visibility:hidden"></p>
+
+ 
+ </div>
+ 
+ 
+ <!-- step3 -->
+ <div class="simsubscreen" id="canvas3" style="visibility:hidden"> 
+ <strong id="titlestep" class="incanvas">STEP &nbsp;</strong> 
+ <span class="circlebg" id="stepnumber">&nbsp;3&nbsp;</span>
+ <p id="pumptext-2" class="steptext" style="font-family:verdana; font-size:14px;">&nbsp;Calculate the Water Cement ratio.</p> 
+ 
+ 
+ <p id="wcrt" style="position:absolute;left: 86px; top:65px;font-family:verdana; font-size:14px;"></p>
+
+
+<img id="table2" style="position:absolute;left: 86px; top:180px;" src="Images/table2.png">
+
+<p id="wcrt2" style="position:absolute;left: 86px; top:130px;font-family:verdana; font-size:14px;"></p>
+<p id="wcrt1" style="position:absolute;left: 86px; top:130px;font-family:verdana; font-size:14px;"></p>
+
+
+ <form id="wc" style="position:absolute;left: 86px; top:480px;font-family:verdana; font-size:14px;">
+ <label>Select  w/c based on the requirement and experience : </label>
+ <input id="wcr"  type="number" min="" max="">
+ <input type="button" value="OK" onclick="step3();">
+ </form>
+ <p id="wc2" style="position:absolute;left: 86px; top:220px;font-family:verdana; font-size:14px;"></p>
+ <p id="wc3" class="box" style="position:absolute;left:300px; top:320px;font-family:verdana; font-size:14px;visibility:hidden;"></p>
+
+ 
+ </div>	
+
+
+ 
+<!--Step4	-->	
+<div class="simsubscreen" id="canvas4" style="visibility:hidden">
+<strong class="incanvas">STEP &nbsp;</strong><span class="circlebg">&nbsp;4&nbsp;</span>
+<p class="steptext" style="font-family:verdana; font-size:14px;">&nbsp;Calculate the water content.</p>
+<p id="water" style="position:absolute;left: 86px; top:65px;font-family:verdana; font-size:14px;"></p>
+<img id="table3" style="position:absolute;left: 86px; top:200px;" src="Images/table3.png">
+
+
+<p id="slump2" style="position:absolute;left: 86px; top:130px;font-family:verdana; font-size:14px;"></p>
+
+<form id="waterc" style="position:absolute;left: 86px; top:480px;font-family:verdana; font-size:14px;">
+ <label id="wct"> Enter Maximum Water Content :</label>
+ <input id="water1"  type="number" min="" max="">
+ <input type="button" value="OK" onclick="step4();">
+ </form>
+
+ <p id="wtr2" style="position:absolute;left: 440px; top:65px;font-family:verdana; font-size:14px;"></p>
+ <p id="wtr3" style="position:absolute;left: 86px; top:195px;font-family:verdana; font-size:14px;visibility;hidden"></p>
+ <p id="wtr3a" style="position:absolute;left: 86px; top:260px;font-family:verdana; font-size:14px;visibility;hidden"></p>
+ <p id="wtr3b" style="position:absolute;left: 86px; top:325px;font-family:verdana; font-size:14px;visibility;hidden"></p>
+
+ <p id="wtr4" style="position:absolute;left: 86px; top:380px;font-family:verdana; font-size:14px;visibility:hidden">Addition of super plasticizers reduces Water Content upto 20% and above. </p>
+   
+ <form id="ratioc" style="position:absolute;left: 86px; top:445px;font-family:verdana; font-size:14px;visibility:hidden">
+ <label> Enter Percentage Reduction in Water Content(Range:0-29) :</label>
+ <input id="ratio1"  type="number" min="0" max="29">
+ <input type="button" value="OK" onclick="step41();">
+ </form>
+
+  <p id="fcontent" style="position:absolute;left: 275px; top:445px;font-family:verdana; font-size:14px;">
+
+ </div>
+
+ 
+<!--Step5	-->	
+<div class="simsubscreen" id="canvas5" style="visibility:hidden;">
+<strong class="incanvas">STEP &nbsp;</strong><span class="circlebg">&nbsp;5&nbsp;</span>
+<p class="steptext" style="font-family:verdana; font-size:14px;" >&nbsp;Calculate the cement content.</p>
+
+<p id="cement" style="position:absolute;left: 86px; top:65px;font-family:verdana; font-size:14px;"></p>
+<p id="cement0" style="position:absolute;left: 440px; top:65px;font-family:verdana; font-size:14px;"></p>
+
+<p id="cement1" style="position:absolute;left: 86px; top:140px;font-family:verdana; font-size:14px;visibility:hidden">Cement content  = Water Content / Selected W/C </p>
+
+ <p class="anim" id="cement2" style="position:absolute;left: 204px; top:220px;font-family:verdana; font-size:14px;visibility:hidden"></p>
+ 
+ <p class="anim" id="cement3" style="position:absolute;left: 204px; top:300px;font-family:verdana; font-size:14px;visibility:hidden"></p>
+
+ <p  id="cement4" style="position:absolute;left: 86px; top:300px;font-family:verdana; font-size:14px;visibility:hidden"></p>
+ 
+ <p  id="cement5" style="position:absolute;left: 86px; top:380px;font-family:verdana; font-size:14px;visibility:hidden"></p>
+
+ <img  id="un" style="position:absolute;left: 150px; top:380px;font-family:verdana; font-size:14px;visibility:hidden" src="Images/unhappy.png">
+
+ 
+ <p  id="cement6" class="box" style="position:absolute;left: 290px; top:380px;font-family:verdana; font-size:14px;visibility:hidden"></p>
+
+
+
+
+ </div>
+ 
+ 
+<!--Step6	-->	
+<div class="simsubscreen" id="canvas6" style="visibility:hidden">
+<strong id="step6" class="incanvas">STEP &nbsp;</strong>
+<span class="circlebg" id="six">&nbsp;6&nbsp;</span>
+<p  id="step6-1" class="steptext" style="font-family:verdana; font-size:14px;">Calculate the volume of coarse aggregate and fine aggregate.</p>
+
+<p id="cf" class="box" style="position:absolute;left: 86px; top:65px;font-family:verdana; font-size:14px;">Volume of coarse aggregate corresponding to 20mm size and fine aggregate of Zone I 
+for w/c 0.5=0.6<br/><br/><br/><br/>If w/c is less than 0.5 then volume of coarse aggregate is to be increased to decrease the fine aggregate content at the rate of ±0.01 for every ±0.05 change in w/c ratio.<br/><br/><br/><br/>If method of concrete placing is Pumping,then Volume has to be reduced by 10% .
+</p>
+
+<p id="cf1" style="position:absolute;left: 86px; top:300px;font-family:verdana; font-size:14px;visibility:hidden"></p>
+
+<p  id="cf2" style="position:absolute;left: 86px; top:360px;font-family:verdana; font-size:14px;visibility:hidden"></p>
+<p  id="cf2a" style="position:absolute;left: 290px; top:395px;font-family:verdana; font-size:14px;visibility:hidden"></p>
+
+
+<p  id="cf3" style="position:absolute;left: 86px; top:430px;font-family:verdana; font-size:14px;visibility:hidden"></p>
+
+<p  id="cf3a" style="position:absolute;left: 270px; top:465px;font-family:verdana; font-size:14px;visibility:hidden"></p>
+
+
+
+
+
+</div>
+
+
+
+
+
+<!--Step7	-->	
+<div class="simsubscreen" id="canvas7" style="visibility:hidden">
+<strong id="step7" class="incanvas">STEP &nbsp;</strong>
+<span class="circlebg" id="six">&nbsp;7&nbsp;</span>
+<p  id="step7-1" class="steptext" style="font-family:verdana; font-size:14px;">Mix calculations:</p>
+<p id="mix" class="box" style="position:absolute;left: 86px; top:34px;font-family:verdana; font-size:14px;"></p>
+<p id="mix1" style="position:absolute;left: 86px; top:200px;font-family:verdana; font-size:14px;"><strong>a)</strong>Volume of Concrete &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 1m<sup>3</sup></p>
+
+<p id="mix2" style="position:absolute;left: 86px; top:250px;font-family:verdana; font-size:14px;visibility:hidden"></p>
+<p id="mix2a" style="position:absolute;left: 237px; top:290px;font-family:verdana; font-size:14px;visibility:hidden"></p>
+
+<p id="mix3" style="position:absolute;left: 86px; top:330px;font-family:verdana; font-size:14px;visibility:hidden"></p>
+<p id="mix3a" style="position:absolute;left: 227px; top:370px;font-family:verdana; font-size:14px;visibility:hidden"></p>
+
+<p id="mix4" style="position:absolute;left: 86px; top:410px;font-family:verdana; font-size:14px;visibility:hidden"></p>
+<p id="mix4a" style="position:absolute;left: 328px; top:490px;font-family:verdana; font-size:14px;visibility:hidden"></p>
+
+
+</p>
+</div>
+
+
+
+<!--Step7	-->	
+<div class="simsubscreen" id="canvas8" style="visibility:hidden">
+<strong id="step8" class="incanvas">STEP &nbsp;</strong>
+<span class="circlebg" id="six">&nbsp;8&nbsp;</span>
+<p  id="step8-1" class="steptext" style="font-family:verdana; font-size:14px;">Mix calculations:</p>
+<p id="mix8" class="box" style="position:absolute;left: 86px; top:38px;font-family:verdana; font-size:14px;"></p>
+
+<p id="mix5" style="position:absolute;left: 86px; top:270px;font-family:verdana; font-size:14px;visibility:hidden"></p>
+<p id="mix5a" style="position:absolute;left: 290px; top:310px;font-family:verdana; font-size:14px;visibility:hidden"></p>
+
+<p id="mix6" style="position:absolute;left: 86px; top:350px;font-family:verdana; font-size:14px;visibility:hidden"></p>
+<p id="mix6a" style="position:absolute;left: 290px; top:390px;font-family:verdana; font-size:14px;visibility:hidden"></p>
+
+<p id="mix7" style="position:absolute;left: 86px; top:430px;font-family:verdana; font-size:14px;visibility:hidden"></p>
+<p id="mix7a" style="position:absolute;left: 275px; top:470px;font-family:verdana; font-size:14px;visibility:hidden"></p>
+
+</p>
+</div>
+
+<div class="simsubscreen" id="canvas9" style="visibility:hidden">
+<strong id="step9" class="incanvas">STEP &nbsp;</strong>
+<span class="circlebg" id="six">&nbsp;9&nbsp;</span>
+<p  id="step9-1" class="steptext" style="font-family:verdana; font-size:14px;">Mix Proportion:</p>
+<p id="mix9" class="box" style="position:absolute;left: 86px; top:38px;font-family:verdana; font-size:14px;"></p>
+
+
+<p id="mix91" style="position:absolute;left: 86px; top:240px;font-family:verdana; font-size:14px;visibility:hidden"></p>
+<p id="mix92" style="position:absolute;left: 86px; top:280px;font-family:verdana; font-size:14px;visibility:hidden"></p>
+
+<p id="mix93" style="position:absolute;left: 86px; top:320px;font-family:verdana; font-size:14px;visibility:hidden"></p>
+<p id="mix94" style="position:absolute;left: 86px; top:360px;font-family:verdana; font-size:14px;visibility:hidden"></p>
+
+<p id="mix95" style="position:absolute;left: 86px; top:400px;font-family:verdana; font-size:14px;visibility:hidden"></p>
+<p id="mix96" style="position:absolute;left: 86px; top:440px;font-family:verdana; font-size:14px;visibility:hidden"></p>
+
+
+</div>
+
+<!--next  Arrow	-->	
+<div id="nav">
+	<img id="nextButton"  style="visibility :hidden;" onclick="navNext(); " src="Images/Next.png" />
+</div>
+
+
+
+
+<!--Blinking Arrow	-->	
+<img class ="" id="arrow1" style="visibility:hidden;" src="Images/arrow1.png"/>
+
+<div id="copyright"> &copy; 2016 SOLVE - The Virtual Lab @ NITK Surathkal, Department of Applied Mechanics & Hydraulics</div>
+</body>
+</html>
+
